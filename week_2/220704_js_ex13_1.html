@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <style>
+            table {
+                text-align: center;
+            }
+            input {
+                text-align: right;
+            }
+        </style>
+        <script>
+            var sum = 0;
+            var arr1 = [];
+            var add_value = ""
+
+            function clc() {
+                document.getElementById("text").value = null; //input창 지우기
+                sum = 0; // 모든 합계 초기화
+                var arr1 = [];
+                var add_value = ""
+            }
+            
+            function value1(value) {
+                add_value += value //String으로 숫자 만들기
+                document.getElementById("text").value = add_value; //input창에 값 띄우기
+                // console.log(add_value)
+            }
+
+            function operator1(opt) {
+                // document.getElementById("text").value = opt; //input창 지우기
+                arr1.push(parseInt(add_value)) //value값 int형으로 arr1에 저장
+                add_value = ""
+                arr1.push(opt) //opt값 String형으로 arr1에 저장
+                console.log(arr1)
+            }
+
+            function calc() {
+                for(var i=0; i<arr1.length; i++) {
+                    if (arr1[i] == '+') {
+                        if (i == 2) {
+                            sum = arr1[i-1] + arr1[i+1]
+                        } else{
+                            sum += arr1[i+1]
+                        }
+                        console.log(sum)
+                    } else if (arr1[i] == '-') {
+                        if (i == 2) {
+                            sum = arr1[i-1] - arr1[i+1]
+                        } else{
+                            sum -= arr1[i+1]
+                        }
+                        console.log(sum)
+                    } else if (arr1[i] == '*') {
+                        if (i == 2) {
+                            sum = arr1[i-1] * arr1[i+1]
+                        } else{
+                            sum *= arr1[i+1]
+                        }
+                        console.log(sum)
+                    } else if (arr1[i] == '/') {
+                        if (i == 2) {
+                            sum = arr1[i-1] / arr1[i+1]
+                        } else{
+                            sum /= arr1[i+1]
+                        }
+                        console.log(sum)
+                    }
+                }    
+
+                document.getElementById("text").value = sum;     
+            }
+        </script>
+    </head>
+    <body>
+        <table border="1" cellspacing="0">
+            <tr>
+                <td colspan="4">
+                    <input type="text" id="text" value="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" id="7" onclick="value1(7);">7</button>
+                </td>
+                <td>
+                    <button type="button" id="8" onclick="value1(8);">8</button>
+                </td>
+                <td>
+                    <button type="button" id="9" onclick="value1(9);">9</button>
+                </td>
+                <td>
+                    <button type="button" id="operator1" onclick="operator1('*');">X</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" onclick="value1(4);">4</button>
+                </td>
+                <td>
+                    <button type="button" onclick="value1(5);">5</button>
+                </td>
+                <td>
+                    <button type="button" onclick="value1(6);">6</button>
+                </td>
+                <td>
+                    <button type="button" id="operator1" onclick="operator1('-');">-</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" onclick="value1(1);">1</button>
+                </td>
+                <td>
+                    <button type="button" onclick="value1(2);">2</button>
+                </td>
+                <td>
+                    <button type="button" onclick="value1(3);">3</button>
+                </td>
+                <td>
+                    <button type="button" id="operator1" onclick="operator1('+');">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" onclick="clc();">AC</button>
+                </td>
+                <td>
+                    <button type="button" onclick="value1(0);">0</button>
+                </td>
+                <td>
+                    <button type="button" id="result1" onclick="calc();">=</button>
+                </td>
+                <td>
+                    <button type="button" id="operator1" onclick="operator1('%');">%</button>
+                </td>
+            </tr>
+            
+        </table>
+        
+    </body>
+</html>

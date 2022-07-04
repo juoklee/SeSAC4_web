@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <style>
+            td {
+                text-align: center;
+                padding: 10px;
+            }
+            span {
+                font-weight: bold;
+                display: inline-block;
+                width: 50px;
+                height: 10px;
+            }
+        </style>
+        <script>
+            num = 1
+            var date = new Date();
+            function add() {
+                var table1 = document.getElementById("table1")
+                var tr1 = document.createElement("tr"); //tr태그 만들기
+                var td1 = document.createElement("td"); //td태그 만들기
+                var td2 = document.createElement("td");
+                var td3 = document.createElement("td");
+                var td4 = document.createElement("td")
+
+                table1.appendChild(tr1);
+                tr1.appendChild(td1);
+                tr1.appendChild(td2);
+                tr1.appendChild(td3);
+                tr1.appendChild(td4);
+                
+
+                td1.innerText = num;
+                td1.style = "text-align:left;"
+                td2.innerText = document.getElementById("writer").value;
+                td3.innerText = document.getElementById("contents").value;
+                td3.style = "text-align:left;"
+                td4.innerText = date.getFullYear() + "-" + date.getMonth() + "-"+ date.getDate() + " " + date.getHours() + " : " + date.getMinutes();
+
+                num += 1
+            }
+
+        </script>
+    </head>
+    <body>
+        <div>방명록입니다.</div>
+        <br>
+        <span>작성자</span> <input type="text" id="writer" value="">
+        <br>
+        <span>내용</span> <input type="text" id="contents" value="">
+        <br>
+        <br>
+        <button id="add" onclick="add();">작성</button>
+        <br>
+        <br>
+        <table border="1" cellspacing="0" id="table1">
+            <tr>
+                <td>번호</td>
+                <td id="td1">작성자</td>
+                <td id="td2">내용</td>
+                <td id="td3">작성일</td>
+            </tr>
+
+        </table>
+        
+    </body>
+</html>

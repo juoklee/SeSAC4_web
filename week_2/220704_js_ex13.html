@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script>
+            function calc() {
+                v1 = parseInt(document.getElementById("value1").value);
+                v2 = parseInt(document.getElementById("value2").value);
+                o1 = document.getElementById("operator1").value;
+                if (o1 == '+') {
+                    document.getElementById("result1").value = (v1 + v2);
+                } else if (o1 == '-') {
+                    document.getElementById("result1").value = (v1 - v2);
+                } else if (o1 == '*') {
+                    document.getElementById("result1").value = (v1 * v2);
+                } else if (o1 == '/') {
+                    document.getElementById("result1").value = (v1 / v2);
+                }
+            }
+
+            function clc() {
+                document.getElementById("value1").value = null;
+                document.getElementById("value2").value = null;
+                document.getElementById("operator1").value = null;
+                document.getElementById("result1").value = null;
+            }
+
+        </script>
+    </head>
+    <body>
+        값1: <input type="text" id="value1" class="text1" value="">
+        <br>
+        값2: <input type="text" id="value2" class="text1" value="">
+        <br>
+        연산자: <input type="text" id="operator1" class="text1" value="">
+        <br>
+        결과: <input type="text" id="result1" class="text1" value="">
+        <br>
+
+        <button type="button" onclick="calc();">계산하기</button>
+        <button type="button" onclick="clc();">초기화</button>
+        
+    </body>
+</html>
