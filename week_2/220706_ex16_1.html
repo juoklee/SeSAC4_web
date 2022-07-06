@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <!-- jQuery CDN-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!-- jQuery Ui-->
+        <script src="../jquery-ui-1.13.1.custom/jquery-ui.js"></script>
+        <!-- jQuery Ui CSS-->
+        <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css">
+
+        <style>
+            div {
+                width: 300;
+                height: 300;
+                position: relative;
+                left: 100px;
+                top: 100px;
+                cursor: pointer;
+            }
+            .red {
+                background-color: red;
+            }
+            .orange {
+                background-color: orange;
+            }
+            .yellow {
+                background-color: yellow;
+            }
+            .green {
+                background-color: green;
+            }
+            .blue {
+                background-color: blue;
+            }
+            .purple {
+                background-color: purple;
+            }
+            
+        </style>
+        <script>
+            var colors = ["red","orange","yellow","green","blue","purple"];
+            function changeColor() {
+                var now = $("div").attr("class");
+                var i = colors.indexOf(now);
+
+                if (i == colors.length - 1 ) {
+                    $("div").switchClass(now,colors[0]);
+                } else {
+                    $("div").switchClass(now,colors[i+1]);
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="red" onclick="changeColor();"></div>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <!-- jQuery CDN-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!-- jQuery Ui-->
+        <script src="../jquery-ui-1.13.1.custom/jquery-ui.js"></script>
+        <!-- jQuery Ui CSS-->
+        <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css">
+
+        <style>
+            div {
+                position: relative;
+                left: 45px;
+            }
+            .image {
+                width: 300px;
+                height: 300px;
+            }
+            button {
+                background-color: black;
+                color: aliceblue;
+                height: 7%;
+            }
+            .apple {
+                background-image: url("../image/apple.jpg");
+                width: 300px;
+                height: 300px;
+            }
+            .banana {
+                background-image: url("../image/banana.jpg");
+                width: 300px;
+                height: 300px;
+            }
+            .grape {
+                background-image: url("../image/grape.jpg");
+                width: 300px;
+                height: 300px;
+            }
+            .peach {
+                background-image: url("../image/peach.jpg");
+                width: 300px;
+                height: 300px;
+            }
+        </style>
+        <script>
+            function change( fruit ) {
+                $(".image").switchClass(fruit);
+            }
+        </script>
+    </head>
+    <body>
+        <div class="image"></div>
+        <br>
+        <div>
+            <button type="button" onclick="change('apple');">사과</button>
+            <button type="button" onclick="change('banana');">바나나</button>
+            <button type="button" onclick="change('grape');">포도</button>
+            <button type="button" onclick="change('peach');">복숭아</button>
+        </div>
+    </body>
+</html>
