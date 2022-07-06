@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <!-- jQuery CDN-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <style>
+            img {
+                width: 300px;
+                height: 300px;
+            }
+            div {
+                position: relative;
+                left: 45px;
+            }
+            button {
+                background-color: black;
+                color: aliceblue;
+                height: 7%;
+            }
+        </style>
+        <script>
+            function click(op) {
+
+                if (op == 0) {
+                    $("img").attr("src", "../image/apple.jpg");
+                } else if (op == 1) {
+                    $("img").attr("src", "../image/banana.jpg");
+                } else if (op == 2) {
+                    $("img").attr("src", "../image/grape.jpg");
+                } else if (op == 3) {
+                    $("img").attr("src", "../image/peach.jpg");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <img src="">
+        <br>
+        <div>
+            <button type="button" onclick="click(0)">사과</button>
+            <button type="button" onclick="click(1);">바나나</button>
+            <button type="button" onclick="click(2);">포도</button>
+            <button type="button" onclick="click(3);">복숭아</button>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <!-- jQuery CDN-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        
+        <script>
+            function setValue() {
+                // document.getElementById("input1").value = "~~~";
+                $( "#input1").val( "~~~" );
+            }
+            function getValue() {
+                // alert( document.getElementById("input1").value );
+                alert(  $( "#input1").val() );
+            }
+            function changeStyle() {
+                // var span = document.querySelector("span");
+                // span.style = "font-size: 20px; color: red;";
+                $("span").css("font-size", "28px");
+                $("span").css("color", "red");
+            }
+            function changeText() {
+                // var span = document.querySelector("span");
+                // span.innerText = "javascript!!";
+                $("span").text("jQuery~~~~");
+            }
+            function changeAttribute() {
+                // var img = document.querySelector("img");
+                // img.width = "100";
+                $("img").attr("width", "100px");
+            }
+            function changeHTML() {
+                // var p = document.querySelector("p");
+                // p.innerText = "<h1>innerText</h1>" //글자 그대로 화면에 보여짐
+                // p.innerHTML = "<h1>innerHTML</h1>" //h1 태그가 인식되어서 화면에 보여짐
+                $("p").html("<h1>jQuery~~~~</h1>");
+            }
+        </script>
+    </head>
+
+    <body>
+        <input type="text" id="input1">
+        <button type="button" onclick="setValue();">setValue</button>
+        <button type="button" onclick="getValue();">getValue</button>
+
+        <br>
+
+        <span>안녕</span>
+        <img src="">
+        <button type="button" onclick="changeStyle();">changeStyle</button>
+        <button type="button" onclick="changeText();">changeText</button>
+        <button type="button" onclick="changeAttribute();">changeAttribute</button>
+
+        <p style="background-color: orange;">p태그</p>
+        <button type="button" onclick="changeHTML();">changeHTML</button>
+
+
+
+    </body>
+</html>
