@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <!-- jQuery CDN-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!-- jQuery Ui-->
+        <script src="../jquery-ui-1.13.1.custom/jquery-ui.js"></script>
+        <!-- jQuery Ui CSS-->
+        <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css">
+        
+        <style>
+            div {
+                position: relative;
+                left: 300;
+            }
+            td {
+                width: 20;
+                height: 20;
+                padding: 15 15 15 15;
+            }
+            table caption {
+                color: green;
+                text-size-adjust: 20;
+                font-size: large;
+                font-weight: 700;
+            }
+            .sun {
+                color: red;
+            }
+            .sat {
+                color: blue;
+            }
+            table {
+                text-align: center;
+            }
+            table #day {
+                cursor: pointer;
+            }
+            table #day td:hover{
+                width: 20;
+                height: 20;
+                padding: 15 15 15 15;
+                font-size: 20px;
+            }
+        </style>
+
+        <script>
+            function clickDay(day) {
+                $("#day").val(day);
+            }
+            function writeContent() {
+                day = $("#day").val(); //1
+                content = $("#contents").val(); //~~~~
+                $("#day1").text(day+ "\n" +content);
+            }
+        </script>
+    </head>
+
+    <body>
+        날짜 : <input type="number" id="day"> <br>
+        
+        내용 : <input type="text" id="contents"> <br>
+
+        <button type="button" onclick="writeContent();">작성</button> <br><br>
+
+        <div>
+            <table>
+                <caption>2022년 7월</caption>
+                <tr>
+                    <td class="sun">日</td>
+                    <td>月</td>
+                    <td>火</td>
+                    <td>水</td>
+                    <td>木</td>
+                    <td>金</td>
+                    <td class="sat">土</td>
+                </tr>
+                <tr id="day">
+                    <td class="sun"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="day1" onclick="clickDay(1);">1</td>
+                    <td class="sat">2</td>
+                </tr>
+                <tr id="day">
+                    <td class="sun">3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td class="sat">9</td>
+                </tr>
+                <tr>
+                    <td class="sun">10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td class="sat">16</td>
+                </tr>
+                <tr>
+                    <td class="sun">17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td class="sat">23</td>
+                </tr>
+                <tr>
+                    <td class="sun">24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td class="sat">30</td>
+                </tr>
+                <tr>
+                    <td class="sun">31</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
