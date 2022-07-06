@@ -2,25 +2,31 @@
     <head>
         <script>
             function calc() {
-                v1 = parseInt(document.getElementById("value1").value);
-                v2 = parseInt(document.getElementById("value2").value);
-                o1 = document.getElementById("operator1").value;
-                if (o1 == '+') {
+                var v1 = parseInt(document.getElementById("value1").value);
+                var v2 = parseInt(document.getElementById("value2").value);
+                var op = document.getElementById("operator1").value;
+                if (op == '+') {
                     document.getElementById("result1").value = (v1 + v2);
-                } else if (o1 == '-') {
+                } else if (op == '-') {
                     document.getElementById("result1").value = (v1 - v2);
-                } else if (o1 == '*') {
+                } else if (op == '*') {
                     document.getElementById("result1").value = (v1 * v2);
-                } else if (o1 == '/') {
+                } else if (op == '/') {
                     document.getElementById("result1").value = (v1 / v2);
                 }
             }
 
             function clc() {
                 document.getElementById("value1").value = null;
+               // document.getElementById("value1").value = "";
                 document.getElementById("value2").value = null;
                 document.getElementById("operator1").value = null;
                 document.getElementById("result1").value = null;
+                
+                // var inputs = document.querySelectorAll("input");
+                // for (var i=0; i<inputs.length; i++) {
+                //     inputs[i].value = "";
+                // }
             }
 
         </script>

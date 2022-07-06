@@ -21,7 +21,7 @@
                 var td1 = document.createElement("td"); //td태그 만들기
                 var td2 = document.createElement("td");
                 var td3 = document.createElement("td");
-                var td4 = document.createElement("td")
+                var td4 = document.createElement("td");
 
                 table1.appendChild(tr1);
                 tr1.appendChild(td1);
@@ -31,11 +31,12 @@
                 
 
                 td1.innerText = num;
+                // td1.innerText = document.querySelectorAll(".table > tr")
                 td1.style = "text-align:left;"
                 td2.innerText = document.getElementById("writer").value;
                 td3.innerText = document.getElementById("contents").value;
                 td3.style = "text-align:left;"
-                td4.innerText = date.getFullYear() + "-" + date.getMonth() + "-"+ date.getDate() + " " + date.getHours() + " : " + date.getMinutes();
+                td4.innerText = date.getFullYear() + "-" + (date.getMonth()+1) + "-"+ date.getDate() + " " + date.getHours() + " : " + date.getMinutes();
 
                 num += 1
             }
@@ -56,9 +57,9 @@
         <table border="1" cellspacing="0" id="table1">
             <tr>
                 <td>번호</td>
-                <td id="td1">작성자</td>
-                <td id="td2">내용</td>
-                <td id="td3">작성일</td>
+                <td>작성자</td>
+                <td>내용</td>
+                <td>작성일</td>
             </tr>
 
         </table>
