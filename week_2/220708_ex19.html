@@ -38,7 +38,7 @@
             .row-box {
                 width: 20px; 
                 height: 50px; 
-                background-color: #20313c;
+                background-color: #406379;
                 margin:0 auto;
             }
             .fadein1 {
@@ -105,6 +105,48 @@
                 background-size: 70px;
                 color: black;
             }
+            .context-div {
+                background-color: #e3f2fd;
+                border-radius: 4%;
+            }
+            .ml-5 {
+                margin-left: 5rem;
+            }
+            .ml-7 {
+                margin-left: 7rem;
+            }
+            .ml-10 {
+                margin-left: 10rem;
+            }
+            .mr-7 {
+                margin-right: 7rem;
+            }
+            .mr-5 {
+                margin-right: 5rem;
+            }
+            .pl-3 {
+                padding-left: 3rem;
+            }
+            .pr-3 {
+                padding-right: 3rem;
+            }
+            .text-right {
+                padding-right: 3rem;
+                text-align: right;
+            }
+            .text-left {
+                padding-left: 3rem;
+                text-align: left;
+            }
+            @font-face {
+                font-family: 'GmarketSansMedium';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            body {
+                font-family: 'GmarketSansMedium';
+            }
         </style>
 
         <script>
@@ -156,7 +198,6 @@
                             startDelay: 3900
                     }); 
                 })
-
             });
         </script>
     </head>
@@ -166,7 +207,7 @@
             <!-- nav -->
             <nav class="navbar navbar-expand-lg fixed-top" id="myMenu" style="background-color: #e3f2fd;">
                 <div class="container-fluid">
-                    <a class="navbar-brand ms-5 mb-2 fw-bold" href="#About">Juok's Portfolio</a>
+                    <a class="navbar-brand ms-5 fw-bold" href="#About">Juok's Portfolio</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -209,54 +250,73 @@
 
             <!-- Experience-->
             <div class="section justify-content-center" data-anchor="Experience">
+                <!-- SeSAC -->
                 <div class="row">
-                    <div class="col-4 pb-0"><h1 class="fs-3 fw-bold text-center">Experience</h1></div>
-                    <div class="col-4 pb-0">
-                        <div class="col row-box"></div>
-                        <div class="col row-box mb-1"></div>
-                        <div class="col radius-box1 mb-1"></div>
+                    <div class="col-5 justify-content-center p-0 pt-5">
+                        <div class="row p-2"></div>
+                        <div class="col ml-10 mb-5"><h1 class="fs-3 fw-bold text-center">Experience</h1></div>
+                        <div class="ml-7 pl-3 p-0 context-div">
+                            <h6 class="fs-6 pt-3 pl-3 fw-bold text-right">SeSAC 영등포 캠퍼스 4기 웹 풀스택 과정</h6>
+                            <p class="fs-6 pb-3 m-0 text-right">(2022.06 ~ )</p>
+                        </div>
                     </div>
-                    <div class="col-4"></div>
+                    <div class="col-2 p-0 m-0">
+                        <div class="row row-box"></div>
+                        <div class="row row-box"></div>
+                        <div class="row row-box mb-1"></div>
+                        <div class="row radius-box1 mb-1 mr-0 ml-0"></div>
+                    </div>
+                    <div class="col-5 justify-content-center p-0 pt-5">
+                        <div class="row p-2"></div>
+                        <div class="col mr-5 mb-5"><h1 class="fs-3 fw-bold text-center"></h1></div>
+                        <div class="mr-7 pr-3 p-0 context-div">
+                            <h6 class="fs-6 pt-3 fw-bold text-center">어쩌구저쩌구 공부</h6>
+                        </div>
+                    </div>
                 </div>
+                <!-- certificate -->
                 <div class="row">
-                    <div class="col-4"></div>
-                    <div class="col-4">
-                        <div class="col row-box mb-1"></div>
-                        <div class="col radius-box2 mb-1"></div>
+                    <div class="col-5 justify-content-center p-0">
+                        <div class="ml-7 mt-5 p-0 context-div">
+                            <h6 class="fs-6 pt-3 pl-3 fw-bold text-right">정보처리기사 자격증 취득</h6>
+                            <p class="fs-6 pb-3 m-0 text-right">(2021.11)</p>
+                        </div>
                     </div>
-                    <div class="col-4"></div>
+                    <div class="col-2 p-0">
+                        <div class="row row-box mb-1"></div>
+                        <div class="row radius-box2 mb-1"></div>
+                    </div>
+                    <div class="col-5"></div>
                 </div>
+                <!-- graduate -->
                 <div class="row">
-                    <div class="col-4"></div>
-                    <div class="col-4">
-                        <div class="col row-box mb-1"></div>
-                        <div class="col radius-box3 mb-1"></div>
+                    <div class="col-5 justify-content-center p-0">
+                        <div class="ml-7 mt-5 p-0 context-div">
+                            <h6 class="fs-6 pt-3 pl-3 fw-bold text-right">전남대학교 의공학과 학사 졸업</h6>
+                            <p class="fs-6 pb-3 m-0 text-right">(2021.08)</p>
+                        </div>
                     </div>
-                    <div class="col-4"></div>
+                    <div class="col-2 p-0">
+                        <div class="row row-box mb-1"></div>
+                        <div class="row radius-box3 mb-1"></div>
+                    </div>
+                    <div class="col-5"></div>
                 </div>
+                <!-- Java -->
                 <div class="row">
-                    <div class="col-4"></div>
-                    <div class="col-4">
-                        <div class="col row-box mb-1"></div>
-                        <div class="col radius-box4 mb-1"></div>
+                    <div class="col-5 justify-content-center p-0">
+                        <div class="ml-7 mt-5 p-0 context-div">
+                            <h6 class="fs-6 pt-3 pl-3 fw-bold text-right">국가기간산업직종훈련 풀스택 과정 이수</h6>
+                            <p class="fs-6 pb-3 m-0 text-right">(2020.11 ~ 2021.05)</p>
+                        </div>
                     </div>
-                    <div class="col-4"></div>
-                </div>
-                <div class="row">
-                    <div class="col-4"></div>
-                    <div class="col-4">
-                        <div class="col row-box mb-1"></div>
-                        <div class="col radius-box5 mb-1"></div>
+                    <div class="col-2 p-0">
+                        <div class="row row-box mb-1"></div>
+                        <div class="row radius-box5 mb-1"></div>
+                        <div class="row row-box"></div>
+                        <div class="row row-box"></div>
                     </div>
-                    <div class="col-4"></div>
-                </div>
-                <div class="row">
-                    <div class="col-4"></div>
-                    <div class="col-4">
-                        <div class="col row-box"></div>
-                        <div class="col row-box mb-1"></div>
-                    </div>
-                    <div class="col-4"></div>
+                    <div class="col-5"></div>
                 </div>
             </div>
 
