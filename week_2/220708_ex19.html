@@ -5,15 +5,15 @@
 
         <!-- jQuery CDN-->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <!-- BootStrap CSS -->
+        <!-- BootStrap CSS CDN -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
-        <!-- BootStrap JS -->
+        <!-- BootStrap JS CDN-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
         <!-- FullPage.js CDN -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css">
-
-
+        <!-- Typed.js CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.8/typed.min.js"></script>
         <style>
             .nav-item a:hover {
                 color:rgb(54, 80, 200) !important;
@@ -28,8 +28,137 @@
                 transform: scale(1.2);
                 cursor: pointer;
             }
+            .a > div {
+                opacity: 0;
+            }
+            .a:hover > div{
+                opacity: 1;
+                cursor: pointer;
+            }
+            .row-box {
+                width: 20px; 
+                height: 50px; 
+                background-color: #20313c;
+                margin:0 auto;
+            }
+            .fadein1 {
+                animation: fadein 1s;
+            }
+            .fadein2 {
+                animation: fadein 2s;
+            }
+            .fadein3 {
+                animation: fadein 3s;
+            }
+            .fadein4 {
+                animation: fadein 4s;
+            }
+            .fadein5 {
+                animation: fadein 5s;
+            }
+            @keyframes fadein {
+                from   { opacity: 0; }
+                to { opacity: 1; }
+            }
+            .radius-box1 {
+                width: 70px;
+                height: 70px;
+                margin:0 auto;
+                border-radius: 0%;
+                background-image: url("../image/computer.png");
+                background-size: 70px;
+                color: black;
+            }
+            .radius-box2 {
+                width: 70px;
+                height: 70px;
+                margin:0 auto;
+                border-radius: 0%;
+                background-image: url("../image/pencil.png");
+                background-size: 70px;
+                color: black;
+            }
+            .radius-box3 {
+                width: 70px;
+                height: 70px;
+                margin:0 auto;
+                border-radius: 0%;
+                background-image: url("../image/user.png");
+                background-size: 70px;
+                color: black;
+            }
+            .radius-box4 {
+                width: 70px;
+                height: 70px;
+                margin:0 auto;
+                border-radius: 0%;
+                background-image: url("../image/heart.png");
+                background-size: 70px;
+                color: black;
+            }
+            .radius-box5 {
+                width: 70px;
+                height: 70px;
+                margin:0 auto;
+                border-radius: 0%;
+                background-image: url("../image/browser.png");
+                background-size: 70px;
+                color: black;
+            }
         </style>
 
+        <script>
+            $(document).ready(function() {
+                //fullpage.js options
+                $('#fullpage').fullpage({
+                    menu: '#myMenu',
+                    autoScrolling:true,
+                    sectionsColor: ['#d2e4ef', '#a6c9df', '#5684a1','#406379','#2b4250'],
+                    scrollHorizontally: true,
+                    verticalCentered: true,
+                    scrollingSpeed: 700,
+                    navigation: false,
+                    anchors: ['About', 'Experience', 'Skills','Projects', 'Archiving'], //href 설정
+                    animateAnchor:false,
+                    loopBottom: false, //마지막 구역에서 스크롤을 아래로 내릴 때 첫번째 구역이동
+                });
+
+                //img href
+                $('#github-url').click(function(){
+                    var github_url = "https://github.com/juoklee";
+                    window.open(github_url);
+                });
+                $('#mail-url').click(function(){
+                    $(location).attr("href", "mailto:juoklee127@gmail.com")
+                });
+                $('#blog-url').click(function(){
+                    var blog_url = "https://jucoding.tistory.com/";
+                    window.open(blog_url);
+                });
+
+                // typed
+                $(function() {
+                    var typed1 = new Typed('.typed1', {
+                            strings: ['Juok Lee'],
+                            typeSpeed: 50,
+                            loop: false
+                    }); 
+                    var typed2 = new Typed('.typed2', {
+                            strings: ['Full Stack Engineer, Web Developer'],
+                            typeSpeed: 60,
+                            loop: false,
+                            startDelay: 700
+                    }); 
+                    var typed3 = new Typed('.typed3', {
+                            strings: ['서비스를 직접 만들 수 있는 사람이 되고자 개발자가 되었습니다.'],
+                            typeSpeed: 50,
+                            loop: false,
+                            startDelay: 3900
+                    }); 
+                })
+
+            });
+        </script>
     </head>
 
     <body>
@@ -44,13 +173,13 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                         <ul class="nav">
                             <li class="nav-item active">
-                                <a class="nav-link text-dark fw-bold" aria-current="page" href="#Skills">Skills</a>
+                                <a class="nav-link text-dark fw-bold" aria-current="page" href="#Experience">Experience</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark fw-bold" href="#Skills">Skills</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark fw-bold" href="#Projects">Projects</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark fw-bold" href="#Experience">Experience</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark fw-bold" href="#Archiving">Archiving</a>
@@ -62,21 +191,81 @@
             <!-- nav -->
             
             <!-- About Me-->
-            <div class="section" data-anchor="About">
-                <div id="justify-content" class="container">
-                    <h1 class="display-1 text-center fw-bold">Juok Lee</h1>
-                    <div class="row justify-content-center">
-                        <h2 class="fs-2 text-center pt-3">Full Stack Enginee, Web Developer</h2>
+            <div class="section justify-content-center" data-anchor="About">
+                <div class="row p-5"></div>
+                <h1 class="display-1 text-center fw-bold pt-5 typed1"></h1>
+                <div class="row justify-content-center">
+                    <h2 class="fs-2 text-center fw-bold pt-3 typed2"></h2>
+                </div>
+                <div class="row justify-content-center">
+                    <h6 class="text-center fw-bold pt-3 pb-5 typed3"></h6>
+                </div>
+                <div class="row row-box mb-3 fadein1"></div>
+                <div class="row row-box mb-3 fadein2"></div>
+                <div class="row row-box mb-3 fadein3"></div>
+                <div class="row row-box mb-3 fadein4"></div>
+                <div class="row row-box pb-0 mb-0 fadein5"></div>
+            </div>
+
+            <!-- Experience-->
+            <div class="section justify-content-center" data-anchor="Experience">
+                <div class="row">
+                    <div class="col-4 pb-0"><h1 class="fs-3 fw-bold text-center">Experience</h1></div>
+                    <div class="col-4 pb-0">
+                        <div class="col row-box"></div>
+                        <div class="col row-box mb-1"></div>
+                        <div class="col radius-box1 mb-1"></div>
                     </div>
-                    <div class="row justify-content-center">
-                        <h6 class="text-center pt-3">서비스를 직접 만들 수 있는 사람이 되고자 개발자가 되었습니다.</h6>
+                    <div class="col-4"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col-4">
+                        <div class="col row-box mb-1"></div>
+                        <div class="col radius-box2 mb-1"></div>
                     </div>
+                    <div class="col-4"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col-4">
+                        <div class="col row-box mb-1"></div>
+                        <div class="col radius-box3 mb-1"></div>
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col-4">
+                        <div class="col row-box mb-1"></div>
+                        <div class="col radius-box4 mb-1"></div>
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col-4">
+                        <div class="col row-box mb-1"></div>
+                        <div class="col radius-box5 mb-1"></div>
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col-4">
+                        <div class="col row-box"></div>
+                        <div class="col row-box mb-1"></div>
+                    </div>
+                    <div class="col-4"></div>
                 </div>
             </div>
+
+
+
             <!-- Skills-->
             <div class="section" data-anchor="Skills">
-                <div id="justify-content-center" class="slide">
-                    <h1 class="display-1 justify-content-center text-center fw-bold p-5">Skills</h1>
+                <div class="slide">
+                    <h1 class="text-center  text-light fw-bold p-5">Skills</h1>
                     <!-- Progress -->
                     <div class="container">
                         <div class="row">    
@@ -111,6 +300,8 @@
                 </div>
                 
             </div>
+
+
             <!-- Projects -->
             <div class="section" data-anchor="Projects">
                 <div id="justify-content" class="container">
@@ -165,77 +356,34 @@
 
                 </div>
             </div>
-            <!-- Experience-->
-            <div class="section" data-anchor="Experience">
-                <div id="justify-content" class="container">
-                    <h1 class="display-1 text-light text-center fw-bold pt-5">Experience</h1>
-                
-                </div>
-            </div>
+            
             <!-- Archiving -->
             <div class="section fp-auto-height" data-anchor="Archiving">
-                <div id="justify-content" class="container">
-                    <!--<h1 class="display-1 text-light text-center fw-bold p-5">Archiving</h1>-->
-                    <div class="row justify-content-center pt-5">
-                        <div class="col text-light fs-2 text-center a">
-                            <div class="row justify-content-center fs-5 fw-bold pb-3">Github</div>
-                            <img id="github-url" src="../image/GitHub-Mark-Light-64px.png">
-                        </div>
-                        <div class="col text-light fs-2 text-center a">
-                            <div class="row justify-content-center fs-5 fw-bold pb-3">Mail</div>
-                            <img id="mail-url" src="../image/mail.png">
-                        </div>
-                        <div class="col text-light fs-2 text-center a">
-                            <div class="row justify-content-center fs-5 fw-bold pb-3">Blog</div>
-                            <img id="blog-url" src="../image/blog.png">
-                        </div>
+                <div class="row justify-content-center pt-5">
+                    <div class="col text-light fs-2 text-center a">
+                        <img id="github-url" src="../image/GitHub-Mark-Light-64px.png">
+                        <div id="github-url" class="row justify-content-center fs-6 fw-bold pt-3">Github</div>
                     </div>
-                    <div class="row justify-content-center pt-5">
-                        <h6 class="text-light text-center pt-5">© 2022. Lee juok. All rights reserved.</h6>
+                    <div class="col text-light fs-2 text-center a">
+                        <img id="mail-url" src="../image/mail.png">
+                        <div id="mail-url" class="row justify-content-center fs-6 fw-bold pt-3">Mail</div>
+                    </div>
+                    <div class="col text-light fs-2 text-center a">
+                        <img id="blog-url" src="../image/blog.png">
+                        <div id="blog-url" class="row justify-content-center fs-6 fw-bold pt-3">Blog</div>
                     </div>
                 </div>
+                <div class="row justify-content-center pt-3 pb-3">
+                    <h6 class="text-light text-center">© 2022. Lee juok. All rights reserved.</h6>
+                </div>
             </div>
+
         </div>
         
 
 
 
-        <script>
-            
-            $(document).ready(function() {
 
-                //fullpage.js options
-                $('#fullpage').fullpage({
-                    menu: '#myMenu',
-                    autoScrolling:true,
-                    sectionsColor: ['#d2e4ef', '#a6c9df', '#5684a1','#406379','#2b4250'],
-                    scrollHorizontally: true,
-                    verticalCentered: true,
-                    scrollingSpeed: 700,
-                    navigation: false,
-                    anchors: ['About', 'Skills', 'Projects', 'Experience'], //href 설정
-                    animateAnchor:false,
-                    loopBottom: false, //마지막 구역에서 스크롤을 아래로 내릴 때 첫번째 구역이동
-                });
-
-
-                //Aos ready
-                AOS.init();
-
-                //img href
-                $('#github-url').click(function(){
-                    $(location).attr("href", "https://github.com/juoklee")
-                });
-                $('#mail-url').click(function(){
-                    $(location).attr("href", "mailto:juoklee127@gmail.com")
-                });
-                $('#blog-url').click(function(){
-                    $(location).attr("href", "https://jucoding.tistory.com/")
-                });
-
-            });
-
-        </script>
 
 
     
