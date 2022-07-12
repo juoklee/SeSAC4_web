@@ -1,0 +1,473 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Juok's Portfolio</title>
+
+        <!-- jQuery CDN-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!-- BootStrap CSS CDN -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+        <!-- BootStrap JS CDN-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- FullPage.js CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css">
+        <!-- Typed.js CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.8/typed.min.js"></script>
+        <style>
+            .nav-item a:hover {
+                color:rgb(54, 80, 200) !important;
+            }
+            .a img {
+                width: 36px;
+                height: 36px;
+                opacity: 0.5;
+            }
+            .a:hover img{
+                opacity: 1.0;
+                transform: scale(1.2);
+                cursor: pointer;
+            }
+            .a > div {
+                opacity: 0;
+            }
+            .a:hover > div{
+                opacity: 1;
+                cursor: pointer;
+            }
+            .row-box {
+                width: 20px; 
+                height: 50px; 
+                background-color: #406379;
+                margin:0 auto;
+            }
+            .fadein1 {
+                animation: fadein 1s;
+            }
+            .fadein2 {
+                animation: fadein 2s;
+            }
+            .fadein3 {
+                animation: fadein 3s;
+            }
+            .fadein4 {
+                animation: fadein 4s;
+            }
+            .fadein5 {
+                animation: fadein 5s;
+            }
+            @keyframes fadein {
+                from   { opacity: 0; }
+                to { opacity: 1; }
+            }
+            .radius-box1 {
+                width: 70px;
+                height: 70px;
+                margin:0 auto;
+                border-radius: 0%;
+                background-image: url("../image/computer.png");
+                background-size: 70px;
+                color: black;
+            }
+            .radius-box2 {
+                width: 70px;
+                height: 70px;
+                margin:0 auto;
+                border-radius: 0%;
+                background-image: url("../image/pencil.png");
+                background-size: 70px;
+                color: black;
+            }
+            .radius-box3 {
+                width: 70px;
+                height: 70px;
+                margin:0 auto;
+                border-radius: 0%;
+                background-image: url("../image/user.png");
+                background-size: 70px;
+                color: black;
+            }
+            .radius-box4 {
+                width: 70px;
+                height: 70px;
+                margin:0 auto;
+                border-radius: 0%;
+                background-image: url("../image/heart.png");
+                background-size: 70px;
+                color: black;
+            }
+            .radius-box5 {
+                width: 70px;
+                height: 70px;
+                margin:0 auto;
+                border-radius: 0%;
+                background-image: url("../image/browser.png");
+                background-size: 70px;
+                color: black;
+            }
+            .context-div {
+                background-color: #e3f2fd;
+                border-radius: 4%;
+            }
+            .ml-5 {
+                margin-left: 5rem;
+            }
+            .ml-7 {
+                margin-left: 7rem;
+            }
+            .ml-10 {
+                margin-left: 10rem;
+            }
+            .mr-7 {
+                margin-right: 7rem;
+            }
+            .mr-5 {
+                margin-right: 5rem;
+            }
+            .pl-3 {
+                padding-left: 3rem;
+            }
+            .pr-3 {
+                padding-right: 3rem;
+            }
+            .pt-7 {
+                padding-top: 7rem;
+            }
+            .text-right {
+                padding-right: 3rem;
+                text-align: right;
+            }
+            .text-left {
+                padding-left: 3rem;
+                text-align: left;
+            }
+            @font-face {
+                font-family: 'GmarketSansMedium';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            body {
+                font-family: 'GmarketSansMedium';
+            }
+            .hide-h1 {
+                opacity: 0;
+            }
+        </style>
+
+        <script>
+            $(document).ready(function() {
+                //fullpage.js options
+                $('#fullpage').fullpage({
+                    menu: '#myMenu',
+                    autoScrolling:true,
+                    sectionsColor: ['#d2e4ef', '#a6c9df', '#5684a1','#406379','#2b4250'],
+                    scrollHorizontally: true,
+                    verticalCentered: true,
+                    scrollingSpeed: 700,
+                    navigation: false,
+                    anchors: ['About', 'TimeLine', 'Skills','Projects', 'Archiving'], //href 설정
+                    animateAnchor:false,
+                    loopBottom: false, //마지막 구역에서 스크롤을 아래로 내릴 때 첫번째 구역이동
+                });
+
+                //img href
+                $('#github-url').click(function(){
+                    var github_url = "https://github.com/juoklee";
+                    window.open(github_url);
+                });
+                $('#mail-url').click(function(){
+                    $(location).attr("href", "mailto:juoklee127@gmail.com")
+                });
+                $('#blog-url').click(function(){
+                    var blog_url = "https://jucoding.tistory.com/";
+                    window.open(blog_url);
+                });
+
+                // typed
+                $(function() {
+                    var typed1 = new Typed('.typed1', {
+                            strings: ['Juok Lee'],
+                            typeSpeed: 50,
+                            loop: false
+                    }); 
+                    var typed2 = new Typed('.typed2', {
+                            strings: ['Full Stack Engineer, Web Developer'],
+                            typeSpeed: 60,
+                            loop: false,
+                            startDelay: 700
+                    }); 
+                    var typed3 = new Typed('.typed3', {
+                            strings: ['서비스를 직접 만들 수 있는 사람이 되고자 개발자가 되었습니다.'],
+                            typeSpeed: 50,
+                            loop: false,
+                            startDelay: 3900
+                    }); 
+                })
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="fullpage">
+            <!-- nav -->
+            <nav class="navbar navbar-expand-lg fixed-top" id="myMenu" style="background-color: #e3f2fd;">
+                <div class="container-fluid">
+                    <a class="navbar-brand ms-5 fw-bold" href="#About">Juok's Portfolio</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul class="nav">
+                            <li class="nav-item active">
+                                <a class="nav-link text-dark fw-bold" aria-current="page" href="#TimeLine">TimeLine</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark fw-bold" href="#Skills">Skills</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark fw-bold" href="#Projects">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark fw-bold" href="#Archiving">Archiving</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- nav -->
+            
+            <!-- About Me-->
+            <div class="section justify-content-center" data-anchor="About">
+                <div class="row p-5"></div>
+                <h1 class="display-1 text-center fw-bold pt-5 typed1"></h1>
+                <div class="row justify-content-center">
+                    <h2 class="fs-2 text-center fw-bold pt-3 typed2"></h2>
+                </div>
+                <div class="row justify-content-center">
+                    <h6 class="text-center fw-bold pt-3 pb-5 typed3"></h6>
+                </div>
+                <div class="row row-box mb-3 fadein1"></div>
+                <div class="row row-box mb-3 fadein2"></div>
+                <div class="row row-box mb-3 fadein3"></div>
+                <div class="row row-box mb-3 fadein4"></div>
+                <div class="row row-box pb-0 mb-0 fadein5"></div>
+            </div>
+
+            <!-- TimeLine-->
+            <div class="section justify-content-center" data-anchor="TimeLine">
+                <!-- SeSAC -->
+                <div class="row">
+                    <div class="col-5 justify-content-center p-0 pt-5">
+                        <div class="row p-2"></div>
+                        <div class="col ml-10 mb-5"><h1 class="fs-3 fw-bold text-center">TimeLine</h1></div>
+                        <div class="ml-7 pl-3 p-0 context-div">
+                            <h6 class="fs-6 pt-3 pl-3 fw-bold text-right">SeSAC 영등포 캠퍼스 4기 웹 풀스택 과정</h6>
+                            <p class="fs-6 pb-3 m-0 text-right">(2022.06 ~ )</p>
+                        </div>
+                    </div>
+                    <div class="col-2 p-0 m-0">
+                        <div class="row row-box"></div>
+                        <div class="row row-box"></div>
+                        <div class="row row-box mb-1"></div>
+                        <div class="row radius-box1 mb-1 mr-0 ml-0"></div>
+                    </div>
+                    <div class="col-5 justify-content-center p-0 pt-7 mt-5">
+                        <div class="row p-2"></div>
+                        <div class="col ml-10 mb-5"><h1 class="fs-3 fw-bold hide-h1">Experience</h1></div>
+                        <div class="mr-7 pr-3 context-div">
+                            <h6 class="fs-6 pt-3 pr-3 text-left">어쩌구 저쩌구 어쩌구 저쩌구</h6>
+                            <p class="fs-6 pb-3 m-0 text-left">이러쿵 저러쿵 이러쿵 저러쿵</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- certificate -->
+                <div class="row">
+                    <div class="col-5 justify-content-center p-0">
+                        <div class="ml-7 mt-5 p-0 context-div">
+                            <h6 class="fs-6 pt-3 pl-3 fw-bold text-right">정보처리기사 자격증 취득</h6>
+                            <p class="fs-6 pb-3 m-0 text-right">(2021.11)</p>
+                        </div>
+                    </div>
+                    <div class="col-2 p-0">
+                        <div class="row row-box mb-1"></div>
+                        <div class="row radius-box2 mb-1"></div>
+                    </div>
+                    <div class="col-5 justify-content-center p-0">
+                        <div class="mr-7 mt-5 pr-3 context-div">
+                            <h6 class="fs-6 pt-3 pr-3 text-left">어쩌구 저쩌구 어쩌구 저쩌구</h6>
+                            <p class="fs-6 pb-3 m-0 text-left">이러쿵 저러쿵 이러쿵 저러쿵</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- graduate -->
+                <div class="row">
+                    <div class="col-5 justify-content-center p-0">
+                        <div class="ml-7 mt-5 p-0 context-div">
+                            <h6 class="fs-6 pt-3 pl-3 fw-bold text-right">전남대학교 의공학과 학사 졸업</h6>
+                            <p class="fs-6 pb-3 m-0 text-right">(2021.08)</p>
+                        </div>
+                    </div>
+                    <div class="col-2 p-0">
+                        <div class="row row-box mb-1"></div>
+                        <div class="row radius-box3 mb-1"></div>
+                    </div>
+                    <div class="col-5 justify-content-center p-0">
+                        <div class="mr-7 mt-5 pr-3 context-div">
+                            <h6 class="fs-6 pt-3 pr-3 text-left">어쩌구 저쩌구 어쩌구 저쩌구</h6>
+                            <p class="fs-6 pb-3 m-0 text-left">이러쿵 저러쿵 이러쿵 저러쿵</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Java -->
+                <div class="row">
+                    <div class="col-5 justify-content-center p-0">
+                        <div class="ml-7 mt-5 p-0 context-div">
+                            <h6 class="fs-6 pt-3 pl-3 fw-bold text-right">국가기간산업직종훈련 풀스택 과정 이수</h6>
+                            <p class="fs-6 pb-3 m-0 text-right">(2020.11 ~ 2021.05)</p>
+                        </div>
+                    </div>
+                    <div class="col-2 p-0">
+                        <div class="row row-box mb-1"></div>
+                        <div class="row radius-box5 mb-1"></div>
+                        <div class="row row-box"></div>
+                        <div class="row row-box"></div>
+                    </div>
+                    <div class="col-5 justify-content-center p-0">
+                        <div class="mr-7 mt-5 pr-3 context-div">
+                            <h6 class="fs-6 pt-3 pr-3 text-left">어쩌구 저쩌구 어쩌구 저쩌구</h6>
+                            <p class="fs-6 pb-3 m-0 text-left">이러쿵 저러쿵 이러쿵 저러쿵</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Skills-->
+            <div class="section" data-anchor="Skills">
+                <div class="slide">
+                    <h1 class="text-center  text-light fw-bold p-5">Skills</h1>
+                    <!-- Progress -->
+                    <div class="container">
+                        <div class="row">    
+                            <div class="col-3"></div>
+                            <div class="col-8 justify-content-center">
+                                <h6 class="fw-bold pt-3">Language</h6>
+                                <div class="col"> </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">    
+                            <div class="col-3"></div>
+                            <div class="col-8 justify-content-center">
+                                <h6 class="fw-bold pt-3">JavaScript</h6>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">    
+                            <div class="col-3"></div>
+                            <div class="col-8 justify-content-center">
+                                <h6 class="fw-bold pt-3">Python</h6>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+
+            <!-- Projects -->
+            <div class="section" data-anchor="Projects">
+                <div id="justify-content" class="container">
+                    <!-- Project1-->
+                    <div class="slide">
+                        <h1 class="display-1 text-white text-center fw-bold position-relative p-5">Projects</h1>
+                        <div class="text-white carousel" id="carouselExampleControls" data-bs-ride="carousel">
+                            <div class="row justify-content-center">
+                                <div class="row">
+                                    <div class="fs-2 text-center fw-bold">미라클</div>
+                                    <div class="text-center pt-3 pb-5 text-light">2021.02.10 ~ 2021.03.19</div>
+                                </div>
+                                <!-- Carousel -->
+                                <div class="col-lg-4 col-md-3">
+                                    <div class="carousel-inner center-block">
+                                        <div class="carousel-item active">
+                                            <img src="../image/miracle1.png" class="img-responsive center-block rounded w-100" alt="miracle1">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="../image/miracle2.png" class="img-responsive center-block rounded w-100" alt="miracle2">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="../image/miracle3.png" class="img-responsive center-block rounded w-100" alt="miracle3">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 col-md-5">
+                                    <p class="text-justify fw-bold">추억의 싸이월드 미니홈피를 재구성하여 구현한 사이트입니다.</p>
+                                    <p class="pt-2 text-justify">HTML, CSS, js의 기본적인 사용법을 공부하고, JQuery를 이용한 AJAX 처리를 통해 웹사이트의 동적인 구조 및 요소를 추가하는 방법을 배울 수 있었습니다.</p>
+                                    <hr>
+                                    <div class="row pt-2">
+                                        <p class="col-3 fw-bold text-warning">주요기능</p>
+                                        <p class="col-9 text-justify">회원가입, 로그인, 프로필설정, 다이어리, 사진첩, 방명록</p>
+                                    </div>
+                                    <div class="row pt-2">
+                                        <p class="col-3 fw-bold text-warning">참여 멤버</p>
+                                        <p class="col-9 text-justify">곽소언, 김서연 ,류상준, 오솔미, 이주옥, 조연수</p>
+                                    </div>
+                                    <div class="row pt-2">
+                                        <p class="col-3 fw-bold text-warning">Stack</p>
+                                        <p class="col-9 text-justify">Java, JavaScript, jQuery, BootStrap, Apache Tomcat</p>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- Project2-->
+                    <div class="slide text-light text-center">Project 2</div>
+                    <div class="slide text-light text-center">Project 3</div>
+
+                </div>
+            </div>
+            
+            <!-- Archiving -->
+            <div class="section fp-auto-height" data-anchor="Archiving">
+                <div class="row justify-content-center pt-5">
+                    <div class="col text-light fs-2 text-center a">
+                        <img id="github-url" src="../image/GitHub-Mark-Light-64px.png">
+                        <div id="github-url" class="row justify-content-center fs-6 fw-bold pt-3">Github</div>
+                    </div>
+                    <div class="col text-light fs-2 text-center a">
+                        <img id="mail-url" src="../image/mail.png">
+                        <div id="mail-url" class="row justify-content-center fs-6 fw-bold pt-3">Mail</div>
+                    </div>
+                    <div class="col text-light fs-2 text-center a">
+                        <img id="blog-url" src="../image/blog.png">
+                        <div id="blog-url" class="row justify-content-center fs-6 fw-bold pt-3">Blog</div>
+                    </div>
+                </div>
+                <div class="row justify-content-center pt-3 pb-3">
+                    <h6 class="text-light text-center">© 2022. Lee juok. All rights reserved.</h6>
+                </div>
+            </div>
+
+        </div>
+        
+
+
+
+
+
+
+    
+    </body>
+</html>
