@@ -9,43 +9,24 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
         <!-- BootStrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-        <!--FullPage.js CDN -->
+        <!-- FullPage.js CDN -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css">
-        <!-- Chart.js CDN-->
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+
 
         <style>
             .nav-item a:hover {
                 color:rgb(54, 80, 200) !important;
             }
-
-            .row-none1 {
-                width: auto;
-                height: 10px;
-            }
-            .row-none2 {
-                width: auto;
-                height: 100px;
-            }
-            .row-none3 {
-                width: auto;
-                height: 200px;
-            }
-            
-            .a:hover img{
-                transform: scale(1.2);
-                cursor: pointer;
-            }
             .a img {
                 width: 36px;
                 height: 36px;
-
+                opacity: 0.5;
             }
-            .logo {
-                border-radius: 100%;
-                width: 20px;
-                height: 20px;
+            .a:hover img{
+                opacity: 1.0;
+                transform: scale(1.2);
+                cursor: pointer;
             }
         </style>
 
@@ -56,17 +37,14 @@
             <!-- nav -->
             <nav class="navbar navbar-expand-lg fixed-top" id="myMenu" style="background-color: #e3f2fd;">
                 <div class="container-fluid">
-                    <a class="navbar-brand ms-5 mb-2 fw-bold" href="#">Juok's Portfolio</a>
+                    <a class="navbar-brand ms-5 mb-2 fw-bold" href="#About">Juok's Portfolio</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                         <ul class="nav">
                             <li class="nav-item active">
-                                <a class="nav-link text-dark fw-bold" aria-current="page" href="#About">About me</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark fw-bold" href="#Skills">Skills</a>
+                                <a class="nav-link text-dark fw-bold" aria-current="page" href="#Skills">Skills</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark fw-bold" href="#Projects">Projects</a>
@@ -88,14 +66,11 @@
                 <div id="justify-content" class="container">
                     <h1 class="display-1 text-center fw-bold">Juok Lee</h1>
                     <div class="row justify-content-center">
-                        <h2 class="fs-2 text-center">Full Stack Enginee, Web Developer</h2>
+                        <h2 class="fs-2 text-center pt-3">Full Stack Enginee, Web Developer</h2>
                     </div>
-                    <br>
                     <div class="row justify-content-center">
-                        <h6 class="text-center">서비스를 직접 만들 수 있는 사람이 되고자 개발자가 되었습니다.</h6>
+                        <h6 class="text-center pt-3">서비스를 직접 만들 수 있는 사람이 되고자 개발자가 되었습니다.</h6>
                     </div>
-                    <div class="row row-none2"></div>
-                    <div class="row row-none2"></div>
                 </div>
             </div>
             <!-- Skills-->
@@ -149,7 +124,7 @@
                                     <div class="text-center pt-3 pb-5 text-light">2021.02.10 ~ 2021.03.19</div>
                                 </div>
                                 <!-- Carousel -->
-                                <div class="col-6">
+                                <div class="col-lg-4 col-md-3">
                                     <div class="carousel-inner center-block">
                                         <div class="carousel-item active">
                                             <img src="../image/miracle1.png" class="img-responsive center-block rounded w-100" alt="miracle1">
@@ -162,22 +137,21 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-1"></div>
-                                <div class="col-4">
+                                <div class="col-lg-8 col-md-5">
                                     <p class="text-justify fw-bold">추억의 싸이월드 미니홈피를 재구성하여 구현한 사이트입니다.</p>
                                     <p class="pt-2 text-justify">HTML, CSS, js의 기본적인 사용법을 공부하고, JQuery를 이용한 AJAX 처리를 통해 웹사이트의 동적인 구조 및 요소를 추가하는 방법을 배울 수 있었습니다.</p>
                                     <hr>
                                     <div class="row pt-2">
-                                        <p class="col-4 fw-bold text-warning">주요기능</p>
-                                        <p class="col-8 text-justify">회원가입, 로그인, 프로필설정, 다이어리, 사진첩, 방명록</p>
+                                        <p class="col-3 fw-bold text-warning">주요기능</p>
+                                        <p class="col-9 text-justify">회원가입, 로그인, 프로필설정, 다이어리, 사진첩, 방명록</p>
                                     </div>
                                     <div class="row pt-2">
-                                        <p class="col-4 fw-bold text-warning">참여 멤버</p>
-                                        <p class="col-8 text-justify">곽소언, 김서연 ,류상준, 오솔미, 이주옥, 조연수</p>
+                                        <p class="col-3 fw-bold text-warning">참여 멤버</p>
+                                        <p class="col-9 text-justify">곽소언, 김서연 ,류상준, 오솔미, 이주옥, 조연수</p>
                                     </div>
                                     <div class="row pt-2">
-                                        <p class="col-4 fw-bold text-warning">Stack</p>
-                                        <p class="col-8 text-justify">Java, JavaScript, jQuery, BootStrap, Apache Tomcat</p>
+                                        <p class="col-3 fw-bold text-warning">Stack</p>
+                                        <p class="col-9 text-justify">Java, JavaScript, jQuery, BootStrap, Apache Tomcat</p>
                                     </div>
                                 
                                 </div>
@@ -199,31 +173,25 @@
                 </div>
             </div>
             <!-- Archiving -->
-            <div class="section" data-anchor="Archiving">
+            <div class="section fp-auto-height" data-anchor="Archiving">
                 <div id="justify-content" class="container">
-                    <h1 class="display-1 text-light text-center fw-bold">Archiving</h1>
-                    <div class="row row-none2"></div>
-                    <div class="row justify-content-center">
+                    <!--<h1 class="display-1 text-light text-center fw-bold p-5">Archiving</h1>-->
+                    <div class="row justify-content-center pt-5">
                         <div class="col text-light fs-2 text-center a">
-                            <div class="row justify-content-center fs-5 fw-bold">Github</div>
-                            <div class="row row-none1"></div>
+                            <div class="row justify-content-center fs-5 fw-bold pb-3">Github</div>
                             <img id="github-url" src="../image/GitHub-Mark-Light-64px.png">
                         </div>
                         <div class="col text-light fs-2 text-center a">
-                            <div class="row justify-content-center fs-5 fw-bold">Mail</div>
-                            <div class="row row-none1"></div>
+                            <div class="row justify-content-center fs-5 fw-bold pb-3">Mail</div>
                             <img id="mail-url" src="../image/mail.png">
                         </div>
                         <div class="col text-light fs-2 text-center a">
-                            <div class="row justify-content-center fs-5 fw-bold">Blog</div>
-                            <div class="row row-none1"></div>
+                            <div class="row justify-content-center fs-5 fw-bold pb-3">Blog</div>
                             <img id="blog-url" src="../image/blog.png">
                         </div>
-
                     </div>
-                    <div class="row row-none3"></div>
-                    <div class="row justify-content-center">
-                        <h6 class="text-light text-center">© 2022. Lee juok. All rights reserved.</h6>
+                    <div class="row justify-content-center pt-5">
+                        <h6 class="text-light text-center pt-5">© 2022. Lee juok. All rights reserved.</h6>
                     </div>
                 </div>
             </div>
@@ -235,6 +203,7 @@
         <script>
             
             $(document).ready(function() {
+
                 //fullpage.js options
                 $('#fullpage').fullpage({
                     menu: '#myMenu',
@@ -244,10 +213,14 @@
                     verticalCentered: true,
                     scrollingSpeed: 700,
                     navigation: false,
-                    anchors: ['About', 'Skills', 'Projects', 'Experience', 'Archiving'], //href 설정
+                    anchors: ['About', 'Skills', 'Projects', 'Experience'], //href 설정
                     animateAnchor:false,
                     loopBottom: false, //마지막 구역에서 스크롤을 아래로 내릴 때 첫번째 구역이동
                 });
+
+
+                //Aos ready
+                AOS.init();
 
                 //img href
                 $('#github-url').click(function(){
@@ -260,43 +233,6 @@
                     $(location).attr("href", "https://jucoding.tistory.com/")
                 });
 
-            });
-
-            //chart.js option
-            const ctx = document.getElementById('myChart').getContext('2d');
-            const myChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Java', 'JavaScript', 'React.js', 'Node.js', 'Python', 'SpringBoot', 'MongoDB'],
-                    datasets: [{
-                        label: '# of Votes',
-                        data: [70, 70, 40, 40, 80, 70, 50],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
             });
 
         </script>
