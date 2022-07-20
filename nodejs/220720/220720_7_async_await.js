@@ -23,21 +23,20 @@ function getDetail(video) {
     })
 }
 
-
-function exec() {
-    login( 'Lee', '1234' )
-    .then( function(user) {
-        console.log('user님 환영');
-        return getVideo(user);
-    })
-    .then( function(videos) {
-        console.log( videos );
-        return getDetail( videos[0] );
-    })
-    .then( function(title) {
-        console.log( title );
-    });
-}
+// function exec() {
+//     login( 'Lee', '1234' )
+//     .then( function(user) {
+//         console.log('user님 환영');
+//         return getVideo(user);
+//     })
+//     .then( function(videos) {
+//         console.log( videos );
+//         return getDetail( videos[0] );
+//     })
+//     .then( function(title) {
+//         console.log( title );
+//     });
+// }
 
 //위 function exec() 코드와 동일
 async function exec() {
@@ -48,3 +47,4 @@ async function exec() {
     let title = await getDetail(videos[0]);
     console.log(title);
 }
+exec();
