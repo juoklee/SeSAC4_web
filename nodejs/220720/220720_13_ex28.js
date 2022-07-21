@@ -2,7 +2,7 @@ const http = require("http");
 const fs = require('fs').promises;
 
 
-const server = http.createServer( async function(req, res){
+const server = http.createServer(async function(req, res){
     try {
         const data = await fs.readFile('./220629_ex06.html');
         res.writeHead(200);
@@ -30,3 +30,4 @@ server.on( "connection", function(){
 server.on( "checkContinue", function(){
     console.log("Client checkContinue");
 })
+
