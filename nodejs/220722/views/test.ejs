@@ -4,6 +4,18 @@
     </head>
 
     <body>
-        <h1>Hi</h1>
+        <p>
+            <%=a %>
+        </p>
+
+        <% for (var i = 0; i < list.length; i++) { %>
+            <h1><%=list[i]%></h1>
+        <% } %>
+
+
+        <% var b = "hello"; %>
+        <p><%=b%></p>
+
+        <%- include('test2.ejs') %>
     </body>
 </html>

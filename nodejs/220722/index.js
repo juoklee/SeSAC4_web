@@ -11,7 +11,9 @@ app.use( '/abc', express.static( 'public' ));
 
 //기본경로 '/'
 app.get('/', (req, res) => {
-    res.render("test");
+    //두번째 인자: 딕셔너리 형태로 백에서 프론트로 보낼 수 있다.
+    var list = ['apple', 'banana'];
+    res.render("test", {list: list , a:'aaa'});
 });
 
 app.listen(port, () => {
