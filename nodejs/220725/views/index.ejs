@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Index.ejs</title>
+    </head>
+
+    <body>
+        <!-- index.js 파일의 app.get("/receive"~~)로 들어간다. -->
+        <form action="/receive" method="GET">
+            <fieldset>
+                <legend>이름/성별</legend>
+                <label>
+                    <!-- required: 입력란을 작성하라는 alert이 뜨며, 다음으로 넘어가지 않게 한다.-->
+                    이름:
+                    <input type="text" name="name" placeholder="이름" required> <br>
+                </label>
+                <input type="radio" name="gender" id="gender_1" value="남">
+                <label for="gender_1">남</label>
+                <input type="radio" name="gender" value="여">여 <br>
+            </fieldset>
+
+            <input type="checkbox" name="sports" value="축구">축구
+            <input type="checkbox" name="sports" value="야구">야구
+            <input type="checkbox" name="sports" value="농구">농구 <br>
+            <!-- <input type="date"> <br>
+            <input type="color"> <br>
+            <input type="number">  <br>
+            <input type="time"> <br>
+            <input type="password"> <br>
+            <input type="reset" value="Reset">-->
+
+
+            <select name="year">
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+            </select>
+
+
+            <button>전송</button>
+
+            
+        </form>
+    </body>
+</html>
