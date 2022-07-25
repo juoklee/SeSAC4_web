@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const port = 8080;
 const bodyParser = require("body-parser");
+const fs = require("fs");
 
 app.set("view engine", "ejs");
 app.use( express.static( "public" ));
@@ -14,7 +15,7 @@ app.use(express.urlencoded({extended: true}));
 app.use( bodyParser.json() );
 
 app.get("/", function(req, res){
-    res.render("ex31");
+    res.render("ex32_login");
 });
 
 //^ get으로 보낼 때와 post로 보낼때 서버에서 받는 방법이 달라진다.
@@ -26,11 +27,52 @@ app.get("/receive", function(req, res){
     res.render("receive", req.query);
 });
 
-//^ pst으로 보내면 body라는 객체에 데이터가 담겨서 들어온다.
+//^ post으로 보내면 body라는 객체에 데이터가 담겨서 들어온다.
 app.post("/receive", function(req, res){
     // console.log("receive-post");
     console.log( req.body );
     res.render("receive", req.body);
+});
+
+//& 회원가입
+app.post("/join", (req, res) => {
+    console.log( "req.body: ", req.body );
+
+    var {id, username, password} = req.body;
+
+    fs.writeFile("./info.txt", id + "//" + username + "//" + password, (err) => {
+        if (err) {
+            console.log(err);
+            res.status(400).send("err!!");
+        }
+    });
+    res.render("finish", req.body);
+});
+
+//& 로그인
+app.post("/login", (req, res) => {
+    var {id, password} = req.body;
+
+    fs.readFile("./info.txt", (err , data) => {
+        if (err) {
+            console.log(err);
+            res.status(400).send("err!!");
+        }
+        console.log(data.toString());
+
+        var filedata = data.toString().split('//');
+        console.log(filedata);
+
+        if (filedata[0] == id && filedata[2] == password ) {
+            res.render("finish_login", {msg: "로그인 되었습니다."});
+        }else if(filedata[0] != id && filedata[2] == password) {
+            res.render("finish_login", {msg: "아이디가 올바르지 않습니다!"});
+        }else if(filedata[2] != password && filedata[0] == id) {
+            res.render("finish_login", {msg: "비밀번호가 올바르지 않습니다!"});
+        }else if(filedata[2] != password && filedata[0] != id) {
+            res.render("finish_login", {msg: "아이디, 비밀번호가 올바르지 않습니다!"});
+        }
+    });
 });
 
 
