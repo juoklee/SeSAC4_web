@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Axios</title>
+        <!-- Axios-->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        
+        <script>
+            function sendPost() {
+                // console.log("hi");
+
+                axios({
+                    method: "post",
+                    url: "http://localhost:8080/receive",
+                    data: {
+                        name: "codee"
+                    }
+                }).then((response) => {console.log(response.data); });
+            }
+        </script>
+    </head>
+    <body>
+        <form action="/receive">
+            <!-- type을 주지 않으면 함수실행과 동시에 폼을 전송한다 (default type은 submit이기 때문)-->
+            <!-- 그러면 함수실행값을 확인하기도 전에 폼이 전송되어 원하는 값을 보기 힘들다 -->
+            <button type="button" onclick="sendPost();">버튼</button>
+        </form>
+
+        <button onclick="sendPost();">sendPost</button>
+    </body>
+</html>
