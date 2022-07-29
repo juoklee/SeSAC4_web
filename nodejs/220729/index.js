@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const path = require("path");
 //^ multer: 파일 업로드 미들웨어
 const multer = require("multer");
+
 const upload = multer({
     //^ dest: (destination) 어떤 경로에 파일이 저장될 지 경로 설정
     // dest: "uploads/",
