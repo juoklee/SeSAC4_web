@@ -10,39 +10,43 @@ const upload = multer({
     // dest: "uploads/",
     //^ storage: 경로 뿐만 아니라, 파일명 등을 직접 지정, 제어하고 싶을 때
     storage: multer.diskStorage({
-        destination(req, file, done) {
-            done(null, 'uploads/');
+        destination(req, file, cb) {
+            cb(null, 'uploads/');
         },
-        filename(req, file, done) {
+        filename(req, file, cb) {
             const ext = path.extname(file.originalname);
-            done(null, path.basename(file.originalname, ext) + Date.now() + ext );
+            cb(null, req.body.id + ext );
+            // done(null, path.basename(file.originalname, ext) + Date.now() + ext );
         },
     }),
     limits: { fileSize: 5*1024*1024 },
 });
 
 app.set("view engine", "ejs");
-app.use( express.static( "public" ));
+app.use( express.static( "uploads" ));
 app.use(express.urlencoded({extended: true}));
 app.use( bodyParser.json() );
 
 
 //? test, test2라는 미들웨어를 거쳐서 function 실행
 app.get("/", test, test2, function(req, res) {
-    res.render("index");
+    res.render("ex36");
 });
 
 
 //^ 파일업로드, 업로드객체의 single함수는 한개의 파일의 업로드만 도와준다.
+//* ex36
 app.post("/upload", upload.single('userfile'), function(req, res) {
     console.log( req.body );
     console.log( req.file );
-    res.send("Upload");
+    res.render("ex36_success", {filename: req.file.filename});
 });
 
 
 //^ 파일업로드, 업로드객체의 array함수는 여러개의 파일의 업로드를 도와준다.
 app.post("/upload/array", upload.array('userfile'), function(req, res) {
+    // req.body: post방식으로 넘어오는 파라미터를 담고있다.
+    //           http의 body부분에 담겨져 있는데, 이부분을 파싱하기 위해 body-parser와 같은 패키지가 필요
     console.log( req.body );
     console.log( req.files );
     res.send("Upload Array");
