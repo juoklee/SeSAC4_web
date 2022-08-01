@@ -8,10 +8,19 @@ CREATE TABLE user (
     birthday date not null
 );
 
+-- DDL ALTER
 ALTER TABLE user drop column birthday;
 ALTER TABLE user add column birthday date not null;
 
+-- DDL delete
 DROP TABLE user;
 TRUNCATE TABLE user;
 
+
 DESC user;
+
+
+
+
+
+
