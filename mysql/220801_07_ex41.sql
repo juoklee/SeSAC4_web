@@ -38,3 +38,4 @@ SELECT * FROM user;
 DELETE FROM user 
 WHERE id = 'jungkrat';
 SELECT * FROM user;
+
