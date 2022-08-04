@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>success_login.ejs</title>
+        <!-- jQuery CDN-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!-- BootStrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+        <!-- BootStrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <style>
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            font-family: 'GmarketSansMedium';
+            background-color: darkseagreen;
+        }
+        .input-box{
+            width: 500px;
+            height: 40px;
+        }
+        
+        .join-button{
+            width: 500px;
+            height: 40px;
+            background-color: darkslategrey;
+            color: white;
+        }
+    </style>
+
+    <body>
+        <div class="row justify-content-center mt-5">
+            <div class="col-4"></div>
+            <div class="col-4 mt-5">
+                <h6 class="fw-bold text-center fs-5 mt-5"><%=id%>님 <%=msg%></h6>       
+            </div>
+            <div class="col-4"></div>
+        </div>
+
+        <form action="/join" method="GET">
+            <div class="row justify-content-center mt-3">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <button class="join-button">회원가입 하러가기</button>
+                </div>
+                <div class="col-4"></div>
+            </div>
+        </form>
+    </body>
+
+    <script>
+
+    </script>
+</html>
