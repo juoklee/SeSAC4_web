@@ -14,7 +14,7 @@ WHERE name = '홍길동';
 
 -- DML DELETE
 DELETE FROM visitor 
-WHERE name='홍길동';
+WHERE id='6';
 
 
 SELECT * FROM visitor;
