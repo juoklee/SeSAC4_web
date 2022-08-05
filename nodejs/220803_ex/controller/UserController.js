@@ -16,21 +16,34 @@ exports.login = (req, res) => {
 
 exports.post_login = async (req, res) => {
     var data = await User.post_login();
+
     data = data.slice(0, -1).split("\n");
-    console.log( "data:" , data );
+    // console.log( "data:" , data );
 
-    var infoData = [];
-
+    //^ 규리쌤 코드: 바로 데이터 나누고 정보 검사
     for (var i=0; i<data.length; i++) {
-        infoData.push(data[i].split("//"));
-    }
-    console.log( "infoData:" , infoData );
+        var info = data[i].split("//");
 
-    for (var i=0; i<infoData.length; i++) {
-        if (infoData[i][0] == req.body.id && infoData[i][4] == req.body.password) {
+        if (info[0] == req.body.id && info[4] == req.body.password) {
             return res.render("success_login", {id: req.body.id, msg: "로그인 되었습니다."})
         }
     }
-    return res.render("failed_login", {msg: "로그인 실패하였습니다."})
 
+    return res.render("failed_login", {msg: "로그인 실패하였습니다."})
+    
+
+    //^ 내가 짠 코드: 이중배열로 저장하고 정보 검사
+    // var infoData = [];
+
+    // for (var i=0; i<data.length; i++) {
+    //     infoData.push(data[i].split("//"));
+    // }
+    // console.log( "infoData:" , infoData );
+
+    // for (var i=0; i<infoData.length; i++) {
+    //     if (infoData[i][0] == req.body.id && infoData[i][4] == req.body.password) {
+    //         return res.render("success_login", {id: req.body.id, msg: "로그인 되었습니다."})
+    //     }
+    // }
+    // return res.render("failed_login", {msg: "로그인 실패하였습니다."})
 }
