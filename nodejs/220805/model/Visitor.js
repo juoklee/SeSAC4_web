@@ -11,6 +11,7 @@ exports.get_visitors = (cb) => {
     cnn.query('SELECT * FROM visitor;', (err, rows)=> {
         if ( err ) throw err;
         console.log( rows ); 
+
         cb(rows);
     });
 }
@@ -23,4 +24,35 @@ exports.insert = ( name, comment, cb ) => {
 
         cb(rows.insertId);
     });
+}
+
+
+exports.get_visitor = (id, cb) => {
+    // id 컬럼의 값이 id인 데이터를 1개만 검색한다.
+    cnn.query(`SELECT * FROM visitor Where id= ${id} limit 1;`, (err, rows) => {
+        if ( err ) throw err;
+        console.log( rows ); 
+
+        cb(rows);
+    });
+}
+
+
+exports.update = (data, cb) => {
+    var sql = `UPDATE visitor SET name='${data.name}', comment='${data.comment}' WHERE id=${data.id}`;
+    cnn.query(sql, (err, rows) => {
+        if ( err ) throw err;
+        console.log( rows );
+
+        cb(rows);
+    })
+}
+
+exports.delete = (id, cb) => {
+    cnn.query(`DELETE FROM visitor WHERE id=${id}`, (err, rows) => {
+        if ( err ) throw err;
+        console.log( rows );
+
+        cb(rows);
+    })
 }
