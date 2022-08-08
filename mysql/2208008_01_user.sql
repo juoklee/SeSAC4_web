@@ -16,8 +16,10 @@ WHERE name = '홍길동';
 
 -- DML DELETE
 DELETE FROM user 
-WHERE id='6';
+WHERE id='ohwa';
 
 
 SELECT * FROM user;
 
+
+SELECT id, password FROM user WHERE id='ohwa' limit 1;
