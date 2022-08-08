@@ -18,3 +18,4 @@ WHERE id='6';
 
 
 SELECT * FROM visitor;
+
