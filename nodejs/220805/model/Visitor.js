@@ -24,14 +24,3 @@ exports.insert = ( name, comment, cb ) => {
         cb(rows.insertId);
     });
 }
-
-
-exports=update = ( name, comment, cb ) => {
-    var sql = "";
-    cnn.query(sql, (err, rows) => {
-        if ( err ) throw err;
-        console.log( rows ); 
-
-        cb();
-    });
-}
