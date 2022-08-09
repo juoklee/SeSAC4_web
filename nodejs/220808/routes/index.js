@@ -7,5 +7,6 @@ router.post("/join", user.post_user);
 router.get("/login", user.get_login);
 router.post("/login", user.post_login);
 router.patch("/edit", user.patch_user);
+router.delete("/delete", user.delete_user);
 
 module.exports = router; 

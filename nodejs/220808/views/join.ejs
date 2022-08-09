@@ -32,6 +32,9 @@
                 background-color: darkslategrey;
                 color: white;
             }
+            #alert{
+                color: red;
+            }
         </style>
            
         <script>
@@ -53,7 +56,7 @@
 
                     console.log(data);
                     //회원 가입이 완료되었습니다.
-                    let html = "<h6 class='fw-bold text-center fs-4 mt-5'>회원가입이 완료되었습니다.</h6>"
+                    let html = "<h6 class='fw-bold text-center mt-5'>회원가입이 완료되었습니다.</h6>"
                     document.getElementById("contents").innerHTML = html;
                     //로그인 버튼 보이기
                     let button_html = "<button class='join-button' type='button' onclick='login();'>로그인</button>"
@@ -101,7 +104,7 @@
                 }).then((data) => {
                     if ( data.flag == false) {
                         //메세지 띄우기
-                        let alert_html = "<h6 class='fw-bold text-center fs-4 mt-5'>다시 로그인해주세요.</h6>";
+                        let alert_html = "<h6 class='fw-bold text-center mt-5'>다시 로그인해주세요.</h6>";
                         document.getElementById("alert").innerHTML = alert_html;
                     } else {
                         //title
@@ -111,11 +114,11 @@
                         let contents_html = "<h6 class='fw-bold'>ID</h6>"+
                             "<input class='input-box mb-2' type='text' name='id' value='"+ data.result.id +"' readonly><br>" +
                             "<h6 class='fw-bold'>name</h6>" +
-                            "<input class='input-box mb-2' type='text' name='password' value='"+ data.result.name +"' required><br>" +
+                            "<input class='input-box mb-2' type='text' name='name' value='"+ data.result.name +"' required><br>" +
                             "<h6 class='fw-bold'>email</h6>" +
-                            "<input class='input-box mb-2' type='text' name='password' value='"+ data.result.email +"' required><br>" +
+                            "<input class='input-box mb-2' type='text' name='email' value='"+ data.result.email +"' required><br>" +
                             "<h6 class='fw-bold'>phoneNumber</h6>" +
-                            "<input class='input-box mb-2' type='text' name='password' value='"+ data.result.phoneNumber +"' required><br>" +
+                            "<input class='input-box mb-2' type='text' name='phoneNumber' value='"+ data.result.phoneNumber +"' required><br>" +
                             "<h6 class='fw-bold'>password</h6>" +
                             "<input class='input-box mb-2' type='text' name='password' value='"+ data.result.password +"' required><br>";
                         document.getElementById("contents").innerHTML = contents_html;
@@ -123,49 +126,45 @@
                         let alert_html = "";
                         document.getElementById("alert").innerHTML = alert_html;
                         //button
-                        let button_html = "<button class='join-button' type='button' onclick='updateUser('" + data.result.id +  "');'>회원정보수정</button>" +
-                            "<button class='join-button' type='button' onclick='deleteUser('" + data.result.id +  "');'>회원탈퇴</button>";
+                        let button_html = "<div><button class='join-button' type='button' onclick='updateUser();'>회원정보수정</button></div>" +
+                            "<div><button class='join-button' type='button' onclick='deleteUser();'>회원탈퇴</button></div>";
                         document.getElementById("button-group").innerHTML = button_html;
                     }     
                 })
             }
 
             //회원 정보 수정
-            function updateUser( id ) {
+            function updateUser() {
                 var form = document.getElementById("join");
                 axios({
                    method: 'patch',
                    url: 'http://localhost:8080/edit',
                    data: {
-                    id: id,
-                    name: form.name.value,
-                    email: form.email.value,
-                    phoneNumber: form.phoneNumber.value,
-                    password: form.password.value
+                        id: form.id.value,
+                        name: form.name.value,
+                        email: form.email.value,
+                        phoneNumber: form.phoneNumber.value,
+                        password: form.password.value
                    } 
                 }).then((response) => { 
                     return response.data;
                 }).then((data) => {
-                    var input  = document.getElementById(contents);
-                    var children = input.children;
-                    console.log(children);
-
-                    $(children[3]).text(form.name.value);
-                    $(children[5]).text(form.email.value);
-                    $(children[7]).text(form.phoneNumber.value);
-                    $(children[9]).text(form.password.value);
+                    console.log("회원정보 수정완료");
+                    alert("수정완료");
                 });
             }
 
-            //회원 탈퇴
-            function updateUser( id ) {
+            // 회원 탈퇴
+            function deleteUser() {
+                var form = document.getElementById("join");
                 axios({
                    method: 'delete',
                    url: 'http://localhost:8080/delete',
-                   data: { id: id } 
+                   data: { id: form.id.value } 
                 }).then((response) => { return response.data; })
                 .then((data) => { 
-
+                    alert("회원 탈퇴 완료");
+                    login();
                  });
             }
 

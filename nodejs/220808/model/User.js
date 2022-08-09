@@ -19,7 +19,7 @@ exports.insert = ( data, cb ) => {
     });
 }
 
-//로그인 정보
+//로그인 정보 읽기
 exports.select = ( id, password, cb ) => {
     var sql = `SELECT * FROM user WHERE id='${id}' limit 1`;
 
@@ -30,10 +30,20 @@ exports.select = ( id, password, cb ) => {
     });
 }
 
-//정보수정
+//회원 정보 수정
 exports.update = ( data,  cb ) => {
-    var sql = `UPDATE visitor SET name='${data.name}', email='${data.email}', phoneNumber='${data.phoneNumber}', password='${data.password}' WHERE id=${data.id}`;
+    var sql = `UPDATE user SET name='${data.name}', email='${data.email}', phoneNumber='${data.phoneNumber}', password='${data.password}' WHERE id='${data.id}';`;
 
+    cnn.query(sql, (err, rows) => {
+        if ( err ) throw err;
+        console.log( rows ); 
+        cb( rows );
+    });
+}
+
+//회원 탈퇴
+exports.delete = ( id,  cb ) => {
+    var sql = `DELETE FROM user WHERE id='${id}';`;
     cnn.query(sql, (err, rows) => {
         if ( err ) throw err;
         console.log( rows ); 

@@ -31,12 +31,21 @@ exports.post_login = (req, res) => {
             }
         }
         
-    })
+    });
 }
 
 //정보 수정
 exports.patch_user = (req, res) => {
     User.update( req.body, function (result) {      
-        res.send("수정완료") 
-    })
+        console.log("update result:" , result);
+        res.send("수정완료");
+    });
+}
+
+//정보 삭제
+exports.delete_user = (req, res) => {
+    User.delete( req.body.id, function (result) {      
+        console.log("delete result:" , result);
+        res.send("success Delete!");
+    });
 }

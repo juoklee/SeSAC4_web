@@ -7,6 +7,8 @@ const cnn = mysql.createConnection({
     database: 'sesac'
 });
 
+cnn.connect();
+
 exports.get_visitors = (cb) => {
     cnn.query('SELECT * FROM visitor;', (err, rows)=> {
         if ( err ) throw err;
