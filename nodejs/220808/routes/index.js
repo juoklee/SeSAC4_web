@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const user = require("../controller/UserController");
 
-router.get("/", user.get_main);
+router.get("/", user.index);
 router.post("/join", user.post_user);
 router.get("/login", user.get_login);
 router.post("/login", user.post_login);

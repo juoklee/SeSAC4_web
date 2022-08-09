@@ -1,7 +1,7 @@
 const User = require("../model/User");
 
 //메인화면
-exports.get_main = (req, res) => {
+exports.index = (req, res) => {
     res.render("join");
 }
 
