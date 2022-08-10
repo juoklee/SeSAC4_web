@@ -16,9 +16,7 @@ WHERE name = '홍길동';
 
 -- DML DELETE
 DELETE FROM user 
-WHERE id='ohwa';
-
-
+WHERE id='주옥';
 SELECT * FROM user;
 
 
