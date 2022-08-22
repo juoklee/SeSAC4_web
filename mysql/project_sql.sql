@@ -2,6 +2,8 @@ CREATE DATABASE swith;
 
 USE swith;
 
+select * from user;
+
 CREATE TABLE user (
 	user_id VARCHAR(20) NOT NULL PRIMARY KEY, -- 유저 id
     user_password VARCHAR(45) NOT NULL, -- 유저 비밀번호
@@ -36,6 +38,7 @@ CREATE TABLE studygroup (
 );
 
 CREATE TABLE studymember (
+	member_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	study_id INT NOT NULL,
     user_id VARCHAR(20) NOT NULL,
     FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
@@ -75,9 +78,9 @@ DELETE FROM user WHERE user_id='dfd';
 DELETE FROM studymember WHERE user_id='jubby';
 DELETE FROM studygroup WHERE study_id=1;
 -- 가입하기 버튼 클릭시 test
-INSERT INTO studymember VALUES (1, "ohwa");
-INSERT INTO studymember VALUES (1, "jubby");
-INSERT INTO studymember VALUES (2, "ssha");
+INSERT INTO studymember (study_id, user_id) VALUES (2, "mijin");
+INSERT INTO studymember (study_id, user_id) VALUES (3, "sejun22");
+INSERT INTO studymember (study_id, user_id)  VALUES (2, "ssha");
 INSERT INTO studymember VALUES (2, "ohwa");
 INSERT INTO studymember VALUES (2, "juok");
 

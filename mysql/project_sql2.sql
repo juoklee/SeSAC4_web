@@ -51,7 +51,8 @@ WHERE M.user_id="ohwa";
 -- ON 1 = 1;
 
 -- 조장, 멤버가 있는지 없는지 (check) & 있으면 보낼 데이터 (?????)
-SELECT U.user_id, U.user_name, U.user_image from user U, studygroup G
+SELECT U.user_id, U.user_name, U.user_image 
+from user U, studygroup G
 inner join studymember M on M.user_id = U.user_id
 where U.user_id="jubby" AND g.study_id=2;
 
@@ -63,7 +64,7 @@ LEFT JOIN studymember AS M
    ON G.study_id = M.study_id
 LEFT JOIN user AS U
     ON U.user_id = M.user_id
-WHERE G.study_id = 3; 
+WHERE G.study_id = 1; 
 
 
 -- 조장의 user 정보 읽기
