@@ -1,23 +1,21 @@
-CREATE DATABASE swith;
+CREATE DATABASE swith; -- DB 생성 
 
-USE swith;
-
-select * from user;
-
+USE swith; -- DB 사용
+ 
+-- TABLE 생성
 CREATE TABLE user (
 	user_id VARCHAR(20) NOT NULL PRIMARY KEY, -- 유저 id
     user_password VARCHAR(45) NOT NULL, -- 유저 비밀번호
-    hint VARCHAR(100) NOT NULL, -- 비밀번호 찾기 질문 (1, 2, 3, ..)
+    hint VARCHAR(10) NOT NULL, -- 비밀번호 찾기 질문 (1, 2, 3, ..)
     hint_answer VARCHAR(50) NOT NULL, -- 비밀번호 찾기 답
     user_name VARCHAR(20) NOT NULL, -- 유저 닉네임
     user_email VARCHAR(45) NOT NULL, -- 유저 이메일
-    user_image VARCHAR(100) NOT NULL, -- 유저 프로필 이미지
+    user_image VARCHAR(100) DEFAULT 'user_default.jpg', -- 유저 프로필 이미지
     category1 VARCHAR(20) NOT NULL, -- 관심 카테고리 1
     category2 VARCHAR(20) NOT NULL, -- 관심 카테고리 2
-    category3 VARCHAR(20) NOT NULL, -- 관심 카테고리 
+    category3 VARCHAR(20) NOT NULL, -- 관심 카테고리 3
     join_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP -- 유저 가입 날짜
 );
-
 
 CREATE TABLE studygroup (
 	study_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, -- 스터디 그룹 id
@@ -26,9 +24,9 @@ CREATE TABLE studygroup (
     study_name VARCHAR(20) NOT NULL, -- 그룹 명
     study_category VARCHAR(10) NOT NULL, -- 그룹 카테고리 
     study_form VARCHAR(45) NOT NULL, -- 그룹 형식 (온라인, 오프라인)
-    study_recruit VARCHAR(3) NOT NULL, -- 그룹 모집 인원 수 
+    study_recruit VARCHAR(3) NOT NULL, -- 그룹 모집 인원 수
     study_address VARCHAR(50), -- 오프라인일 경우 주소
-    study_image VARCHAR(100) NOT NULL, -- 그룹 프로필 이미지
+    study_image VARCHAR(100) DEFAULT 'group_default.jpg', -- 그룹 프로필 이미지
     study_content MEDIUMTEXT NOT NULL, -- 그룹 소개
     start_period DATE NOT NULL, -- 그룹 시작일
     end_period DATE NOT NULL, -- 그룹 종료일 
@@ -38,14 +36,15 @@ CREATE TABLE studygroup (
 );
 
 CREATE TABLE studymember (
-	member_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	study_id INT NOT NULL,
-    user_id VARCHAR(20) NOT NULL,
+    member_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, -- primary key 있어야해서 생성함
+	study_id INT NOT NULL, -- 스터디 그룹 id
+    user_id VARCHAR(20) NOT NULL, -- 그룹장이 아닌 일반 멤버의 user_id
     FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
     FOREIGN KEY (`study_id`) REFERENCES `studygroup` (`study_id`)
 );
 
 CREATE TABLE likes (
+    likes_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, -- primary key 있어야해서 생성함
     user_id VARCHAR(20) NOT NULL, -- 좋아요 한 유저의 id
     study_id INT NOT NULL, -- 좋아요 한 스터디 그룹 id
     FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
@@ -69,9 +68,10 @@ VALUES("ssha", "group3", "취업", "오프라인", "3", "서울시 영등포구 
 SELECT * FROM user;
 SELECT * FROM studygroup;
 SELECT * FROM studymember;
+SELECT * FROM likes;
 
 -- 삭제 test
-DELETE FROM user WHERE user_id='jubby';
+DELETE FROM user WHERE user_id='ohwa';
 DELETE FROM user WHERE user_id='rrrr';
 DELETE FROM user WHERE user_id='ss';
 DELETE FROM user WHERE user_id='dfd';
