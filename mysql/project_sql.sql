@@ -75,10 +75,10 @@ DELETE FROM user WHERE user_id='jubby';
 DELETE FROM user WHERE user_id='rrrr';
 DELETE FROM user WHERE user_id='ss';
 DELETE FROM user WHERE user_id='dfd';
-DELETE FROM studymember WHERE user_id='jubby';
+DELETE FROM studymember WHERE user_id='juok';
 DELETE FROM studygroup WHERE study_id=1;
 -- 가입하기 버튼 클릭시 test
-INSERT INTO studymember (study_id, user_id) VALUES (2, "mijin");
+INSERT INTO studymember (study_id, user_id) VALUES (3, "juok");
 INSERT INTO studymember (study_id, user_id) VALUES (3, "sejun22");
 INSERT INTO studymember (study_id, user_id)  VALUES (2, "ssha");
 INSERT INTO studymember VALUES (2, "ohwa");
