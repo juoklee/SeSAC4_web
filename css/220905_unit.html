@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <!-- reset css-->
+    <!-- <link rel="stylesheet" href="./reset.css"> -->
+
+    <!-- Normalize css-->
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./220905_unit.css">
+</head>
+<body>
+    <h1>CSS 단위에 대해 알아보자!!</h1>
+
+    <h2>px</h2>
+    <div class="box px"></div>
+
+    <h2>%</h2>
+    <div class="box pct-parent">
+        <div class="pct-child"></div>
+    </div>
+
+
+    <h2>em</h2>
+    <div class="box">
+        가가
+        <span class="em">나나
+            <span class="em">다다</span>
+        </span>
+    </div>
+
+
+    <h2>em 주의사항</h2>
+    <div class="box">
+        <div class="case1">
+            여기는 20px
+            <span class="em-3">여기는 3em이므로 60px</span>
+        </div>
+        <div class="case2">
+            여기는 10px
+            <span class="em-3">여기는 3em이므로 30px</span>
+        </div>
+    </div>
+    
+
+    <h2>rem</h2>
+    <div class="box">
+        가가
+        <span class="rem">나나
+            <span class="rem">다다</span>
+        </span>
+    </div>
+
+    <!-- view port-->
+    <h2>vw</h2>
+    <div class="box vw"></div>
+
+    <h2>vh</h2>
+    <div class="box vh"></div>
+
+    <h1 class="test">HELOOOOOOOOOO</h1>
+
+
+    <h2>px</h2>
+    <div class="box px">1</div>
+    <div class="box px">2</div>
+    <div class="box px">3</div>
+    <div class="box px">4</div>
+
+
+
+</body>
+</html>

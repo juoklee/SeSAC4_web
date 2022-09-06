@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+ul, ol,
+fieldset, legend {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    background-color: pink;
+    width: 100%;
+    height: 100px;
+}
+
+header h1 {
+    margin: 0 auto;
+    position: relative;
+    padding-top: 25px;
+    padding-left: 10px;
+} 
+
+.inner {
+    margin-left: 10px;
+}
+
+/* .slide_menu_on {
+    display: inline-flex;
+    width: 100%;
+    height: 300px;
+    background-color: rgb(234, 187, 69);
+} */
+
+
+.slide_menu {
+    background-color: gold;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    display: block;
+}
+
+.slide_menu.d-none {
+    display: none;
+}
+
+.slide_menu_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.slide_menu_container a {
+    margin: 12px;
+}
+
+.card_list {
+    display: flex;
+    float: left;
+    flex-wrap: wrap; 
+    width: 100%;
+}
+
+.card_wrapper {
+    width: 50%;
+}
+
+.card_item {
+    margin: 8px;
+}
+
+.card_item img {
+    width: 100%;
+}
+
+.card_item .tit {
+    font-size:  18px;
+    font-weight: 700;
+}
+
+/* 1200px 이상 */
+@media screen and (min-width: 1200px) {
+    .inner {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+/* 992px 이상 */
+@media screen and (min-width: 992px) {
+    body {
+        background-color: lavender;
+    }
+    /* 2. 메뉴아이콘가리기 */
+    .icon_menu {
+        display: none;
+    }
+    /* 2. 메뉴1~4 리스트 보이기 */
+    .list_menu {
+        float: right;
+        margin: 0 auto;
+        position: relative;
+        bottom: 25px;
+    }
+    .list_menu a {
+        margin: 8px;
+    }
+    /* problem2 */
+    .card_wrapper {
+        width: 20%;
+    }
+}
+
+/* 992px 미만 */
+@media screen and (max-width: 992px) {
+    .icon_menu {
+        float: right;
+        margin-right: 30px;
+        position: relative;
+        bottom: 30px;
+        font-size: 30px;
+    }
+    .list_menu {
+        display: none;
+    }
+    .card_wrapper {
+        width: 20%;
+    }
+    
+    .card_item .desc {
+        display: none;
+    }
+}

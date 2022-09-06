@@ -1,0 +1,70 @@
+.box {
+    margin-bottom: 100px;
+}
+
+.px {
+    width: 300px;
+    height: 300px;
+    background-color: cadetblue;
+}
+.pct-parent {
+    width: 500px;
+    height: 500px;
+    background-color: darkgoldenrod;
+}
+
+.pct-child {
+    width: 50%;
+    height: 50%;
+    background-color: deeppink;
+}
+
+.em {
+    font-size: 2em;
+}
+
+.case1 {
+    font-size: 20px;
+}
+
+.case2 {
+    font-size: 10px;
+}
+
+.em-3 {
+    font-size: 3em;
+}
+
+.rem {
+    font-size: 2rem;
+}
+
+.vw {
+    height: 20vw;
+    width: 20vw;
+    background-color: coral;
+}
+
+.vh {
+    height: 20vh;
+    width: 20vh;
+    background-color: skyblue;
+}
+
+.test {
+    font-size: 30px;
+}
+
+@media screen and (min-width: 768px) {
+    .px {
+        width: 300px;
+        height: 300px;
+        background-color: pink;
+        border: 1px solid skyblue;
+        float:left;
+        margin-right: 10px;
+    } 
+    .test {
+        font-size: 10vw;
+    }
+}
