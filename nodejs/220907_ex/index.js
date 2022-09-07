@@ -9,10 +9,13 @@ app.get("/", function(req, res){
 });
 
 
+var msg = {hello: ": 안녕하세요!", study: ": 공부합시다!", bye: ": 안녕히계세요!"};
+
 io.on("connection", function(socket){ 
     console.log("Server Socket Connected");
     socket.on("click", function(data) {
         console.log("client:", data);
+        /* 내가 짠 코드, if문 사용은 좋지 않다! */
         if (data == 'hello') {
             socket.emit("clickResponse", data + ': 안녕하세요!');
         } else if(data == 'study') {
@@ -20,6 +23,8 @@ io.on("connection", function(socket){
         } else {
             socket.emit("clickResponse", data + ': 안녕히계세요!');
         }
+        /* 다른 방법 */
+        socket.emit("clickResponse", data + msg[data]);
     })
 });
 

@@ -1,5 +1,6 @@
 <html>
     <head>
+        <!-- socket.io -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"></script>
     </head>
 
@@ -8,7 +9,7 @@
         <button type="button" onclick="btnClick('hello');">hello</button>
         <button type="button" onclick="btnClick('study');">study</button>
         <button type="button" onclick="btnClick('bye');">bye</button>
-        <div id="contents"></div>
+        <div id="contents" style="position:relative; margin-top: 20px; font-weight: 700;"></div>
 
         <script>
             var socket = io.connect();
@@ -25,9 +26,9 @@
                 console.log(data);
                 var contents = document.getElementById('contents');
                 contents.innerText = data;
-                contents.style.position = "relative";
-                contents.style.marginTop = "20px";
-                contents.style.fontWeight = "700";
+                // contents.style.position = "relative";
+                // contents.style.marginTop = "20px";
+                // contents.style.fontWeight = "700";
             });
         </script>
     </body>

@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"></script>
+        <style>
+            .chat-list { background-color: rgb(188, 226, 241); width: 50%; height: 50%; padding: 10px;}
+            .welcome{
+                font-size: 10px;
+                text-align: center;
+                background-color: aliceblue;
+                margin-bottom: 10px;
+            }
+            .msg {
+                border-radius: 2px;
+                margin-bottom: 10px;
+                width: 30%;
+                font-size: 13px;
+            }
+            .my-msg {
+                background-color: yellow;
+                margin-left: 70%;
+                padding-right: 5px;
+                text-align: right;
+            }
+            .other-msg {
+                background-color: white;
+                margin-right: 70%;
+                padding-left: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="chat-list" class="chat-list"></div>
+        <input type="text" id="message">
+        <button type="button" onclick="send();">send</button>
+
+        <script>
+            var id = "";
+            var name = "";
+            var socket = io.connect(); 
+            
+            /* 닉네임 받기 */
+            socket.on("connect", function(){ 
+                name = prompt('닉네임을 입력하세요', '닉네임 입력');
+            });
+
+            /*  socket id 정보 */
+            socket.on("info", function(data) { 
+                id = data;
+            });
+            
+            /*  입장 alert */
+            socket.on("notice", function(socket_id) {
+                    console.log("welcome name:", socket_id);
+                    let chat_list = document.getElementById("chat-list");
+                    let div = document.createElement("div");
+                    
+                    div.textContent = name + "님이 입장했습니다.";
+                    div.className = "welcome";
+                    chat_list.appendChild(div);
+            })
+
+            /*  퇴장 alert */
+            socket.on("left", function(name) {
+                    let chat_list = document.getElementById("chat-list");
+                    let div = document.createElement("div");
+                    div.textContent = name + "님이 퇴장했습니다.";
+                    div.className = "welcome";
+                    chat_list.appendChild(div);
+            })
+
+            /*  message 보내기 */
+            function send() {
+                let msg = document.getElementById("message").value;
+                socket.emit("send", {id, msg}); // msg 보내기
+                document.getElementById("message").value = '';
+            }
+
+            /*  message 받기 */
+            socket.on("newMessage", function(data){ // data 받았으면
+                let chat_list = document.getElementById("chat-list");
+                let div = document.createElement("div"); //div 태그 만들기
+
+                div.textContent = data.msg; // div 태그의 내용을 msg로
+                div.className = "msg";
+
+                if (data.id == id) { // 내가 보낸 거
+                    div.classList.add("my-msg");  
+                } else { // 남이 보낸 거
+                    div.classList.add("other-msg");  
+                }
+                chat_list.appendChild(div); //div 태그를 chat-list의 자식요소로 추가
+            })
+        </script>
+    </body>
+</html>
