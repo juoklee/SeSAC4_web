@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"></script>
+    </head>
+
+    <body>
+        <button type="button" onclick="btnClick();">클릭</button>
+        <script>
+            var socket = io.connect(); // connect(): 클라이언트 쪽에서 연결시도
+            
+            socket.on("connect", function(){ // on('이벤트명', 콜백함수): read (받기)
+                console.log("server connected");
+            });
+
+            socket.on("hello", function(data){
+                console.log("data: ", data);
+            });
+
+            function btnClick(){
+                socket.emit("click", "Click!!"); // emit('이벤트명', data): write (보내기)
+            }
+
+            socket.on("clickResponse", function(data) {
+                console.log("response: ", data);
+            })
+        </script>
+    </body>
+</html>
