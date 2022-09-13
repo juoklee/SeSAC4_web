@@ -36,12 +36,17 @@
 
         <script>
             var id = "";
-            var name = "";
             var socket = io.connect(); 
             
-            /* 닉네임 받기 */
+            /* 닉네임 input 받고, 보내기*/
             socket.on("connect", function(){ 
-                name = prompt('닉네임을 입력하세요', '닉네임 입력');
+                const nickname = prompt('닉네임을 입력하세요');
+                
+                if(!nickname) {
+                    socket.emit('newUser', 'Guest');
+                } else {
+                    socket.emit('newUser', nickname); 
+                }
             });
 
             /*  socket id 정보 */

@@ -16,6 +16,11 @@ io.on("connection", function(socket){
     console.log("connected", socket.id);
     socket.emit("info", socket.id); // socket.id: 클라이언트를 구분하는 식별자 id
 
+    socket.on('newUser', (nickname) => {
+        socket.nickname = nickname;
+    })
+
+
     io.emit("notice", socket.id); // 입장 notice
     
     socket.on("send", function(data) { //msg 받기
