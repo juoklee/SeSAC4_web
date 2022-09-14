@@ -1,0 +1,75 @@
+.wrap {
+    width: 90%;
+    height: 90%;
+}
+
+.main-navbar {
+    background-color: rgb(103, 103, 117);
+    width: 90%;
+    height: 100px;
+}
+
+.container {
+    
+}
+
+.chat-list { 
+    background-color: rgb(188, 226, 241);
+     width: 70%; 
+     height: 90%; 
+     padding: 10px;
+}
+
+.welcome{
+    font-size: 1.5vw;
+    text-align: center;
+    background-color: aliceblue;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+.chat-list div div { 
+    display: inline-block; 
+    border-radius: 2px; 
+    font-size: 1.5vw;
+}
+
+.msg {
+    /* border-radius: 2px;
+    margin-bottom: 10px;
+    width: 30%;
+    font-size: 13px; */
+}
+.my-msg {
+    text-align: right;
+    display: block;
+    float: right;
+    max-width: 60%;
+    margin-bottom: 10px;
+}
+
+.my-msg div { 
+    background-color: yellow; 
+    width: 100%; 
+    overflow-wrap: normal;
+}
+
+.other-msg {
+    /* background-color: white;
+    margin-right: 70%;
+    padding-left: 5px; */
+}
+.other-msg div { background-color: white; }
+
+.my-nickname {
+    margin: 3 0;
+    text-align: right;
+    display: block;
+    font-size: 1vw;
+}
+
+.other-nickname {
+    margin: 3 0;
+    text-align: left;
+    display: block;
+    font-size: 1vw;
+}

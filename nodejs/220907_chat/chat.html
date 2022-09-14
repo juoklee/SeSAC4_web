@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <title>닉네임</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        <style>
+            .chat-list { background-color: rgb(188, 226, 241); width: 70%; height: 90%; padding: 10px;}
+            .welcome{
+                font-size: 1.5vw;
+                text-align: center;
+                background-color: aliceblue;
+                margin-bottom: 10px;
+                border-radius: 3px;
+            }
+            .chat-list div div { 
+                display: inline-block; 
+                border-radius: 2px; 
+                font-size: 1.5vw;
+            }
+
+            .msg {
+                /* border-radius: 2px;
+                margin-bottom: 10px;
+                width: 30%;
+                font-size: 13px; */
+            }
+            .my-msg {
+                text-align: right;
+                display: block;
+                float: right;
+                max-width: 60%;
+                margin-bottom: 10px;
+            }
+
+            .my-msg div { 
+                background-color: yellow; 
+                width: 100%; 
+                overflow-wrap: normal;
+            }
+            
+            .other-msg {
+                /* background-color: white;
+                margin-right: 70%;
+                padding-left: 5px; */
+            }
+            .other-msg div { background-color: white; }
+
+            .my-nickname {
+                margin: 3 0;
+                text-align: right;
+                display: block;
+                font-size: 1vw;
+            }
+
+            .other-nickname {
+                margin: 3 0;
+                text-align: left;
+                display: block;
+                font-size: 1vw;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <div id="chat-list" class="chat-list"></div>
+            <select name="select_box" id="select_box">
+            </select>
+            <input type="text" id="message">
+            <button type="button" onclick="send();">send</button>
+        </div>
+        
+
+        <script>
+            var nickname = prompt('닉네임을 입력하세요');   
+            var socket = io.connect(); 
+
+            if(!nickname) {
+                socket.emit('info2', {nickname: 'Guest'});
+            } else {
+                socket.emit('info2', {nickname: nickname}); 
+            }
+
+            /*  message 보내기 */
+            function send() {
+                let msg = document.getElementById("message").value;
+                let nick = document.getElementById("select_box").value;
+                socket.emit("send", {to: nick, msg: msg}); // msg 보내기
+                document.getElementById("message").value = '';
+            }
+
+            /*  message 받기 */
+            socket.on("newMessage", function(data){ // data 받았으면
+                let chat_list = document.getElementById("chat-list");
+                let div = document.createElement("div"); //div 태그 만들기
+                let div_chat = document.createElement("div"); // <div></div>
+                let span = document.createElement("span");
+
+                div_chat.textContent = data.msg; // div 태그의 내용을 msg로
+
+                if (data.nickname == nickname) { // 내가 보낸 거
+                    span.textContent = nickname;
+                    if(data.is_dm) {
+                        span.textContent = `(DM) ${data.to}에게 ` + span.textContent;
+                    }
+                    span.classList.add("my-nickname");
+                    div.classList.add("my-msg");  
+                } else { // 남이 보낸 거
+                    span.textContent = data.nickname;
+                    if(data.is_dm) {
+                        span.textContent = `(DM) ${data.to}` + span.textContent;
+                    }
+                    span.classList.add("other-nickname");
+                    div.classList.add("other-msg"); 
+                }
+                div.appendChild(span); //span을 div의 자식으로
+                div.appendChild(div_chat); // div_chat을 div의 자식으로
+                chat_list.appendChild(div); //div 태그를 chat-list의 자식요소로 추가
+            })
+
+            /*  입장 alert */
+            socket.on("notice", function(data) {
+                    let chat_list = document.getElementById("chat-list");
+                    let div = document.createElement("div");
+                    div.textContent = data;
+                    div.className = "welcome";
+                    chat_list.appendChild(div);
+            })
+
+            /* user list */
+            socket.on('list', function(list) {
+                // $("#select_box").append(`<option vlaue='${data}'>${data}</option>`)
+                let nick_list = document.getElementById("select_box");
+                while (nick_list.firstChild) { //기존 option 다 지우고
+                    nick_list.removeChild(nick_list.lastChild);
+                }
+                let option = document.createElement("option");
+                option.text = "전체";
+                option.value = "전체";
+                nick_list.appendChild(option);
+                // nickname data 새로 추가
+                for ( let [key, value] of Object.entries(list)) {
+                    // key = "socket.id1", value="nickname1" ~~
+                    if( value != nickname) { 
+                        let option = document.createElement("option");
+                        option.text = value;
+                        option.value = value;
+                        nick_list.appendChild(option);
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <title>chat</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/9bc671aedc.js" crossorigin="anonymous"></script>
+        <!-- <link rel="stylesheet" href="/chat.css" type="text/css"/>  -->
+        <style>
+            .wrap {
+                background: #fff;
+                width: 90%;
+                height: 90%;
+                border-radius: 6px;
+                box-shadow: 0 0 6px rgba(0,0,0,0.3);
+            
+            }
+
+            .main-navbar {
+                padding: 14px;
+	            position: relative;
+            }
+
+            .dots {
+                float: left;
+                width: 100px;
+            }
+            .dots i:nth-child(1) {
+                color: #f57e7d;
+            }
+            .dots i:nth-child(2) {
+                color: #ffc881;
+            }
+            .dots i:nth-child(3) {
+                color: #82cf85;
+            }
+            
+            .expand > i{
+                color: #cfd6e0;
+                font-size: 18px;
+                cursor: pointer;
+            }
+
+            .container {
+                
+            }
+
+            .left-container {
+                background-color: rgb(76, 89, 109);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <div class="main-navbar"> 
+                <div class="dots">
+                    <i class="fa fa-circle"></i>
+                    <i class="fa fa-circle"></i>
+                    <i class="fa fa-circle"></i>
+                </div>
+                <div class="title">
+                    <span></span>
+                </div>
+                <div class="expand">
+                    <i class="fa fa-expand"></i>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="left-container"></div>
+                <div id="chat-list" class="chat-list"></div>
+                <select name="select_box" id="select_box">
+                </select>
+                <input type="text" id="message">
+                <button type="button" onclick="send();">send</button>
+            </div>
+        </div>
+        
+    
+        <script>
+            // var nickname = prompt('닉네임을 입력하세요');   
+            // var socket = io.connect(); 
+
+            // if(!nickname) {
+            //     socket.emit('info2', {nickname: 'Guest'});
+            // } else {
+            //     socket.emit('info2', {nickname: nickname}); 
+            // }
+
+            /*  message 보내기 */
+            function send() {
+
+            }
+
+            /*  message 받기 */
+            // socket.on("newMessage", function(data){ // data 받았으면
+
+            // })
+
+            // /*  입장 alert */
+            // socket.on("notice", function(data) {
+
+            // })
+
+            // /* user list */
+            // socket.on('list', function(list) {
+            // })
+
+        </script>
+    </body>
+</html>

@@ -55,12 +55,12 @@
             });
             
             /*  입장 alert */
-            socket.on("notice", function(socket_id) {
-                    console.log("welcome name:", socket_id);
+            socket.on("notice", function(data) {
+                    console.log("welcome name:", data);
                     let chat_list = document.getElementById("chat-list");
                     let div = document.createElement("div");
                     
-                    div.textContent = name + "님이 입장했습니다.";
+                    div.textContent = data + "님이 입장했습니다.";
                     div.className = "welcome";
                     chat_list.appendChild(div);
             })
@@ -70,7 +70,7 @@
                     let chat_list = document.getElementById("chat-list");
                     let div = document.createElement("div");
                     div.textContent = name + "님이 퇴장했습니다.";
-                    div.className = "welcome";
+                    div.className = "bye";
                     chat_list.appendChild(div);
             })
 
