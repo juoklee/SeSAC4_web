@@ -111,9 +111,19 @@ div {
     display: inline-block;
     background-color: #505d71;
     width: 180px;
-    height: 90%;
+    height: calc(100% - 45px);
     overflow-y: scroll;
 }
+.left-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.left-container::-webkit-scrollbar-thumb {
+    height: 20px; /* 스크롤바의 길이 */
+    background: #cfd6e0; /* 스크롤바의 색상 */
+    border-radius: 10px;
+}
+
 .left-container ul {
     padding: 0;
     margin: 0;
@@ -144,7 +154,7 @@ div {
     display: inline-block;
     position: absolute;
     border-top: 1px solid #cfdae1;
-    height: 90%;
+    height: calc(100% - 45px);
     width: calc(100% - 180px);
 }
 .chat-title {
@@ -166,17 +176,28 @@ div {
     float: left;
 	position: absolute;
 	left: 0;
-	top: 35;
-	bottom: 0;
+	top: 35px;
+	bottom: 44px;
     width: 100%;
     height: calc(100% - 79px);
     overflow-y: scroll;
+
 }
+.chat-list::-webkit-scrollbar {
+    width: 5px;
+}
+.chat-list::-webkit-scrollbar-thumb {
+    height: 10%; /* 스크롤바의 길이 */
+    background: #cfd6e0; /* 스크롤바의 색상 */
+    border-radius: 10px;
+}
+
 .chat {
     list-style: none;
     background: none; 
     margin-bottom: 15px;
     margin-top: 5px;
+    /* height: calc(100% - 35px); */
 }
 .chat li {
     padding: 0.5rem;
@@ -204,13 +225,13 @@ div {
     word-break: break-all;
 }
 .msg .user {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 600;
-    margin: 0 0 2px 0;
+    margin: 0 0 6px 0;
     color: rgb(38, 38, 38);
 }
 .msg p {
-    font-size: 12px;
+    font-size: 15px;
     margin: 0 0 2px 0;
     color: #777;
 }
@@ -222,6 +243,19 @@ div {
     box-shadow: -1px 2px 0px #c1cbcd;
 }
 
+.other:before { /* 말풍선 효과*/
+    content: "";
+    position: relative;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    width: 0px;
+    height: 0px;
+    border: 5px solid #eef8ff;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}
+
 .my {
     justify-content: flex-end;
     align-items: flex-end;
@@ -230,7 +264,7 @@ div {
     border-bottom-right-radius: 0px;
     box-shadow: 1px 2px 0px #c1cbcd;
 }
-.my:after {
+.my:after { /* 말풍선 효과*/
     content: "";
     position: relative;
     display: inline-block;
@@ -304,20 +338,4 @@ div {
     .chat-area{
         width: calc(100% - 110px);
     }
-}
-/* s */
-@media screen and (min-width: 576px) {
-}
-
-/* m */
-@media screen and (max-width: 992px) {
-
-}
-/* L */
-@media screen and (max-width: 1200px) {
-
-}
-/* xl */
-@media screen and (max-width: 1400px) {
-
 }
