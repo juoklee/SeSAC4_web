@@ -4,54 +4,12 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/9bc671aedc.js" crossorigin="anonymous"></script>
-        <!-- <link rel="stylesheet" href="/chat.css" type="text/css"/>  -->
-        <style>
-            .wrap {
-                background: #fff;
-                width: 90%;
-                height: 90%;
-                border-radius: 6px;
-                box-shadow: 0 0 6px rgba(0,0,0,0.3);
-            
-            }
-
-            .main-navbar {
-                padding: 14px;
-	            position: relative;
-            }
-
-            .dots {
-                float: left;
-                width: 100px;
-            }
-            .dots i:nth-child(1) {
-                color: #f57e7d;
-            }
-            .dots i:nth-child(2) {
-                color: #ffc881;
-            }
-            .dots i:nth-child(3) {
-                color: #82cf85;
-            }
-            
-            .expand > i{
-                color: #cfd6e0;
-                font-size: 18px;
-                cursor: pointer;
-            }
-
-            .container {
-                
-            }
-
-            .left-container {
-                background-color: rgb(76, 89, 109);
-            }
-        </style>
+        <link rel="stylesheet" href="/public/chat.css"/> 
     </head>
 
     <body>
         <div class="wrap">
+            <!-- top-navbar -->
             <div class="main-navbar"> 
                 <div class="dots">
                     <i class="fa fa-circle"></i>
@@ -59,7 +17,7 @@
                     <i class="fa fa-circle"></i>
                 </div>
                 <div class="title">
-                    <span></span>
+                    <span> Chat </span>
                 </div>
                 <div class="expand">
                     <i class="fa fa-expand"></i>
@@ -67,12 +25,82 @@
             </div>
 
             <div class="container">
-                <div class="left-container"></div>
-                <div id="chat-list" class="chat-list"></div>
-                <select name="select_box" id="select_box">
-                </select>
-                <input type="text" id="message">
-                <button type="button" onclick="send();">send</button>
+                <div class="left-container">
+                    <ul class="">
+                        <li class="item"><a href="#"><i class="fa fa-list-alt"></i><span>Dashboard</span></a></li>
+                        <li class="item"><a href="#"><i class="fa fa-users"></i><span>Team chat</span></a></li>
+                        <li class="item"><a href="#"><i class="fa fa-user"></i><span>nickname1</span></a></li>
+                        <li class="item"><a href="#"><i class="fa fa-user"></i><span>nickname2</span></a></li>
+                        <li class="item"><a href="#"><i class="fa fa-user"></i><span>nickname3</span></a></li>
+                        <li class="item"><a href="#"><i class="fa fa-user"></i><span>nickname3</span></a></li>
+                        <li class="item"><a href="#"><i class="fa fa-user"></i><span>nickname3</span></a></li>
+                        <li class="item"><a href="#"><i class="fa fa-user"></i><span>nickname3</span></a></li>
+                        
+                    </ul>
+                </div>
+                <!-- chat -->
+                <div class="chat-area">
+                    <div class="chat-title"><span>Conversation</span><i class="fa fa-search"></i></div>
+                    <div id="chat-list" class="chat-list">
+                        <!-- chat message -->
+                        <ol class="chat">
+                            <li class="other">
+                              <div class="msg">
+                                  <div class="user">Marga</div>
+                                <p>Dude</p>
+                                <p>Want to go dinner?</p>
+                              </div>
+                            </li>
+                            <li class="my">
+                              <div class="msg">
+                                <p>Puff...</p>
+                                <p>I'm still doing the Góngora comment...dagdsgasdgasdgasdgasdgasdggasdgasgasdgasdgsdg</p>
+                                <p>Better other day</p>
+                              </div>
+                            </li>
+                            <p class="notification">David joined the group</p>
+                            <li class="other">
+                                <div class="msg">
+                                    <div class="user">Marga</div>
+                                  <p>Dude</p>
+                                  <p>Want to go dinner?</p>
+                                </div>
+                              </li>
+                              <li class="my">
+                                <div class="msg">
+                                  <p>Puff...</p>
+                                  <p>I'm still doing the Góngora comment...dagdsgasdgasdgasdgasdgasdggasdgasgasdgasdgsdg</p>
+                                  <p>Better other day</p>
+                                </div>
+                              </li>
+                              <li class="other">
+                                <div class="msg">
+                                    <div class="user">Marga</div>
+                                  <p>Dude</p>
+                                  <p>Want to go dinner?</p>
+                                </div>
+                              </li>
+                              <li class="my">
+                                <div class="msg">
+                                  <p>Puff...</p>
+                                  <p>I'm still doing the Góngora comment...dagdsgasdgasdgasdgasdgasdggasdgasgasdgasdgsdg</p>
+                                  <p>Better other day</p>
+                                </div>
+                              </li>
+                        </ol>
+                        <!-- input -->
+                        <div class="input-area">
+                            <div class="input-wrapper">
+                                <input type="text" id="message" value="">
+                                <i class="fa fa-smile-o"></i>
+                                <i class="fa fa-paperclip"></i>
+                            </div>
+                            <input type="button" onclick="send();" value="Submit" class="send-btn">
+                        </div>
+                    </div>
+
+                    
+                </div>
             </div>
         </div>
         
