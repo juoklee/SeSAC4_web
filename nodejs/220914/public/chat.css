@@ -169,7 +169,7 @@ div {
 	top: 35;
 	bottom: 0;
     width: 100%;
-    height: calc(100%- 35px);
+    height: calc(100% - 79px);
     overflow-y: scroll;
 }
 .chat {
@@ -245,12 +245,13 @@ div {
     background: #e4eaee;
 	padding: 6px;
     display: fixed;
-    /* position: absolute; */
+    position: absolute;
 	left: 0;
 	right: 0;
 	bottom: 0;
     border-top: 1px solid #cfdae1;
     width: 100%;
+    height: 44px;
 }
 .input-area .input-wrapper{
 	background: #fff;
