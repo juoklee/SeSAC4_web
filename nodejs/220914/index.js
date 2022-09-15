@@ -30,7 +30,7 @@ io.on("connection", function(socket){
         data["is_dm"] = false;
         data["nickname"] = list[socket.id];
         console.log("data:", data);
-        if ( data.to == "Team chat") {
+        if ( data.to == "Team chat" || data.to == '') {
             io.emit("newMessage", data); //모든 클라이언트에게 data 보내기
         } else {
             data["is_dm"] = true;

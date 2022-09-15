@@ -30,6 +30,13 @@
                         <li class="item"><a href="#"><i class="fa fa-list-alt"></i><span>Dashboard</span></a></li>
                         <li class="item active"><a href="#"><i class="fa fa-users"></i><span>Team chat</span></a></li>
                         <!-- <li class="item"><a href="#"><i class="fa fa-user"></i><span>nickname1</span></a></li> -->
+                        <div class="my-account">
+                            <div class="name">
+                                <span id="name"></span>
+                                <i class="fa fa-angle-down"></i>
+                                <span class="availability">Available</span>
+                            </div>
+                        </div>
                     </ul>
                 </div>
                 <!-- chat -->
@@ -74,11 +81,13 @@
         <script>
             var nickname = prompt('닉네임을 입력하세요');   
             var socket = io.connect(); 
+
             if(!nickname) {
                 socket.emit('info', {nickname: 'Guest'});
             } else {
                 socket.emit('info', {nickname: nickname}); 
             }
+            document.getElementById("name").textContent = nickname;
 
             /*  입장 alert */
             socket.on("notice", function(data) {
