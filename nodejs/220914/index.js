@@ -2,6 +2,23 @@ var express = require("express");
 var app = express();
 var http = require("http").Server(app);
 var io = require("socket.io")(http);
+var message = require("./utils/message");
+const multer = require('multer');
+const path = require('path');
+
+/* group 이미지 업로드 */
+const fileUpload = multer({
+    storage: multer.diskStorage({
+        destination(req, file, cb) {
+            cb(null, 'public/file');
+        },
+        filename(req, file, cb) {
+            const ext = path.extname(file.originalname);
+            cb(null, Date.now() + ext );
+        },
+    }),
+    limits: { fileSize: 5*1024*1024 },
+});
 
 /* css */
 app.use( "/public", express.static('public'));
@@ -9,7 +26,7 @@ app.use( "/public", express.static('public'));
 /* route */
 app.get("/", function(req, res){
     console.log("client");
-    res.sendFile( __dirname + "/chat.html");
+    res.sendFile( __dirname + "/views/chat.html");
 });
 
 
@@ -32,6 +49,7 @@ io.on("connection", function(socket){
         console.log("data:", data);
         if ( data.to == "Team chat" || data.to == '') {
             io.emit("newMessage", data); //모든 클라이언트에게 data 보내기
+            // io.emit("newMessage", message(data.to, data.msg)); //모든 클라이언트에게 data 보내기
         } else {
             data["is_dm"] = true;
             let socketID = Object.keys(list).find( (key) => {return list[key] === data.to}); //닉네임이 같을 때의 key(socket.id)

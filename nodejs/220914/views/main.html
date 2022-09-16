@@ -4,7 +4,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/9bc671aedc.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="/public/chat.css"/> 
+        <link rel="stylesheet" href="/public/css/chat.css"/> 
     </head>
 
     <body>
@@ -41,27 +41,6 @@
                 </div>
                 <!-- chat -->
                 <div class="chat-area">
-                    <div class="chat-title" id="chat-title"><span>Conversation</span><i class="fa fa-search"></i></div>
-                    <div id="chat-list" class="chat-list">
-                        <!-- chat message -->
-                        <ol class="chat" id="chat">
-                            <!-- <li class="other">
-                              <div class="msg">
-                                <div class="user">Marga</div>
-                                <p>Dude</p>
-                                <p>Want to go dinner?</p>
-                              </div>
-                            </li>
-                            <li class="my">
-                              <div class="msg">
-                                <p>Puff...</p>
-                                <p>I'm still doing the Góngora comment...dagdsgasdgasdgasdgasdgasdggasdgasgasdgasdgsdg</p>
-                                <p>Better other day</p>
-                              </div>
-                            </li>
-                            <p class="notification">David joined the group</p> -->
-                        </ol>
-                        
                     </div>
                     <!-- input -->
                     <div class="input-area">
@@ -100,11 +79,14 @@
 
             /* 유저 list */
             socket.on('list', function(list) {
-                let nick_list = document.getElementById("nickname_box");
+                let nick_list = document.getElementById("nickname_box");    
+                $(".nickname_box #nick_list").remove();
+
                 for ( let [key, value] of Object.entries(list)) { // list update
                     // key = "socket.id1", value="nickname1" ~~
                     let li = document.createElement("li");
                     li.classList.add("item");
+                    li.id = "nick_list";
                     li.innerHTML = `<a href="#"><i class="fa fa-user"></i><span>${value}</span></a>`;
                     nick_list.appendChild(li);
                 }
@@ -121,12 +103,15 @@
             /*  message 보내기 */
             function send() {
                 let msg = document.getElementById("message").value;
-                socket.emit("send", {to: nick, msg: msg}); // msg 보내기
-                document.getElementById("message").value = '';
+                if(msg != '') {
+                    socket.emit("send", {to: nick, msg: msg}); // msg 보내기
+                    document.getElementById("message").value = '';
+                }
             }
             
             /*  message 받기 */
             socket.on("newMessage", function(data){ // data 받았으면
+                let chat_list = document.getElementById("chat-list");
                 let chat = document.getElementById("chat");
                 let li = document.createElement("li");
                 let div = document.createElement("div");
@@ -151,6 +136,7 @@
                 div.appendChild(p); //p를 div 자식으로
                 li.appendChild(div);
                 chat.appendChild(li);
+                chat_list.scrollTop = chat_list.scrollHeight; // 스크롤 자동 내리기
 
             })
 
