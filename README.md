@@ -25,6 +25,14 @@
 
 ### ✌ 22-06-27: Github setting, VS Code install
 ### 💖 22-06-29: HTML Tag
+* <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_1/220629_css.html">css</a><br/>
+* <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_1/220629_css2.html">div tag css</a><br/>
+* <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_1/220629_ex05.html">table</a><br/>
+* <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_1/220629_ex01.html">practice - 카페 음료 문서 작성</a><br/>
+* <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_1/220629_ex04.html">practice - 시간표</a><br/>
+* <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_1/220629_ex04.html">practice - 시간표</a><br/>
+* <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_1/220629_ex05.html">practice - table 음료</a><br/>
+* <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_1/220629_ex06.html">practice - 애벌레</a><br/>
 ### 🎱 22-07-01: CSS Style
 ### 🐱‍🚀 22-07-04: JavaScript Data type
 ### ✨ 22-07-06: jQuery
