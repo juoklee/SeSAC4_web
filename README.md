@@ -42,6 +42,8 @@
 ### ⛈ 22-08-08: MVC CRUD(2)
 ### 💻 22-08-10: ORM, Sequelize
 ### 👨‍👩‍👦‍👦 22-08-15 ~ 22-09-02: Team Project
+* <a href="https://github.com/SeSAC43-Project/StudyWith">Swith Project</a><br/>
+[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=jubby)](https://velog.io/@jubby/Swith-팀-프로젝트-회고록)
 ### 🌪 22-09-05: CSS Responsive Web Design
 ### 🎃 22-09-07: Socket(1)
 ### 🍕 22-09-14: Socket(2)
