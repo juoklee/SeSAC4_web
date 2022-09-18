@@ -31,10 +31,29 @@
   - <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_1/220701_js-ex12.html">practice - 중첩 for문 </a><br/>
   - <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_1/220701_js-ex13.html">practice - while </a><br/>
 ### 🐱‍🚀 22-07-04: JavaScript Data type
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_1/220704_js_date.html">date 객체</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_2/220704_js_math.html">math 객체 </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_2/220704_js_object.html">object 객체 </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_2/220704_js_document1.html">document 객체1</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_2/220704_js_document2.html">document 객체2 - getElement</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_2/220704_js_document3.html">document 객체3 - child</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_2/220704_js_ex13.html">practice - document 객체 calc</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_2/220704_js_ex13_1.html">practice - document 객체 계산기</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_2/220704_js_ex14.html">practice - 방명록 </a><br/>
 ### ✨ 22-07-06: jQuery
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_2/220706_jquery.html">setValue, getValue</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_2/220706_jquery2.html">요소 다루기</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_2/220706_ex15.html">practice - 이미지 바꾸기</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_2/220706_ex16.html">practice - 클래스(컬러) 바꾸기</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_2/220706_ex17.html">practice - 스케줄</a><br/>
 ### 📷 22-07-08: BootStrap
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_2/220708_bootstrap.html">bootstrap</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_2/220708_bootstrap.html">bootstrap div col</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_2/220708_ex18.html">practice - 웹페이지 만들기</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_2/220708_ex19.html">practice - 포트폴리오 만들기</a><br/>
 ### 🖥 22-07-11: Clone Coding
 ### 💦 22-07-13 NCP Server
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/week_3/220713_server.html">practice - 서버에 올려보기</a><br/>
 ### ⚠ 22-07-15: Git Issue, Merge, Branch
 ### 🎁 22-07-18: Node.js Module, Built-in object
 ### 🎨 22-07-20: Node.js Destructuring assignment, Callback Hell, Promise, Async, HTTP
@@ -49,7 +68,8 @@
 ### 💻 22-08-10: ORM, Sequelize
 ### 👨‍👩‍👦‍👦 22-08-15 ~ 22-09-02: Team Project
 * <a href="https://github.com/SeSAC43-Project/StudyWith">Swith Project</a><br/>
-[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=jubby)](https://velog.io/@jubby/Swith-팀-프로젝트-회고록)
+
+  [![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=jubby)](https://velog.io/@jubby/Swith-팀-프로젝트-회고록)
 ### 🌪 22-09-05: CSS Responsive Web Design
 ### 🎃 22-09-07: Socket(1)
 ### 🍕 22-09-14: Socket(2)
