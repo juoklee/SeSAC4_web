@@ -54,7 +54,3 @@
 ### 🎃 22-09-07: Socket(1)
 ### 🍕 22-09-14: Socket(2)
 ### 🥨 22-09-16: Socket(3)
-
-<br/>
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=juoklee&layout=compact)](https://github.com/juoklee/SeSAC4_web)
