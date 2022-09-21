@@ -33,19 +33,19 @@ function App() {
       {/* 네번째 문제 */}
       {a>b && (<h1>a가 b보다 큽니다</h1>)}
       {/* 다섯번째 문제 */}
-      <div class="test">
-        <h1 class="title">{title}</h1>
-        <p>아이디: <input class="input" type="text"></input></p>
-        <p>비밀번호: <input class="input" type="text"></input></p>
+      <div className="test">
+        <h1 className="title">{title}</h1>
+        <p>아이디: <input className="input" type="text"></input></p>
+        <p>비밀번호: <input className="input" type="text"></input></p>
       </div>
       {/* 여섯번째 문제 */}
-      <div class="red"></div>
-      <div class="orange"></div>
-      <div class="yellow"></div>
-      <div class="green"></div>
-      <div class="blue"></div>
-      <div class="navy"></div>
-      <div class="purple"></div>
+      <div className="red"></div>
+      <div className="orange"></div>
+      <div className="yellow"></div>
+      <div className="green"></div>
+      <div className="blue"></div>
+      <div className="navy"></div>
+      <div className="purple"></div>
     </div>
 
     // <div className="test" style={style}>
