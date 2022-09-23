@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 
 class Ex56Class1 extends Component {
-    constructor(props) {
-        super(props);
-
-        this. state = {
-            cnt: 0
-        }
+    state = {
+        cnt: 0
     }
    
     render() {

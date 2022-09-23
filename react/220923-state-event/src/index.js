@@ -4,6 +4,8 @@ import StateClass from './StateClass';
 import StateFunction from './StateFunction';
 import Ex56Class1 from './Ex56Class1';
 import Ex56Function2 from './Ex56Function2';
+import EventClass from './EventClass';
+import EventFunction from './EventFunction';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,5 +14,7 @@ root.render(
     <Ex56Function2></Ex56Function2>
     {/* <StateClass name="Sesac"/>
     <StateFunction/> */}
+    <EventClass></EventClass>
+    <EventFunction></EventFunction>
   </React.StrictMode>
 );
