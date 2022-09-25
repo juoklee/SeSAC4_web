@@ -71,8 +71,23 @@
 - <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220718/220718_callbackhell_IntoPromise.js">callback Hell into Promise</a><br/>
 - <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220718/220718_ex25_callback.js">practice - callback 예제</a><br/>
 - <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220718/220718_ex25.js">practice - callback 예제 Promise로 바꾸기</a><br/>
-
 ### 🎨 22-07-20: Node.js Destructuring assignment, Callback Hell, Promise, Async, HTTP
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220720/220720_1_array.js">array</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220720/220720_2_object.js">object</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220720/220720_3_class.js">class</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220720/220720_3_class_module.js">class, module</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220720/220720_4_callback.js">callback</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220720/220720_5_promise.js">promise</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220720/220720_6_async.js">async</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220720/220720_7_async_await.js">async, await</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220720/220720_8_ex26.js">practice-promise를 async로</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220720/220720_9_fs.js">fs module</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220720/220720_10_ex27.js">practice-fs모듈</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220720/220720_11_http.js">http</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220720/220720_12_http_file.js">http, file</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220720/220720_13_ex28.js">practice-fs모듈, http와 async</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220720/220720_3_class_module.js">practice-fs모듈, http와 callback</a><br/>
+
 ### 🏆 22-07-22: Express, Node Package Manager(NPM), EJS
 ### 🎯 22-07-25: HTML form, Body-parser, Json
 ### 💚 22-07-27: Axios, Asynchronous HTTP
