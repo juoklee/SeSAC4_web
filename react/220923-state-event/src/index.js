@@ -13,14 +13,14 @@ import Handler_ex from './ex/Handler_ex';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <StateClass name="Sesac"/>
+    <StateClass name="Sesac"/>
     <StateFunction/>
     <Ex56Class1></Ex56Class1>
     <Ex56Function2></Ex56Function2>
     <EventClass></EventClass>
     <EventFunction></EventFunction>
     <Event></Event>
-    <EventC></EventC> */}
+    <EventC></EventC>
     <Handler_ex></Handler_ex>
   </React.StrictMode>
 );
