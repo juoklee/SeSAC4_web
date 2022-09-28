@@ -10,7 +10,7 @@ root.render(
   <React.StrictMode>
     {/* <Map />
     <Sample /> */}
-    {/* <Event></Event> */}
+    <Event></Event>
     <Event2></Event2>
   </React.StrictMode>
 );
