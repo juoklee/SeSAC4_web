@@ -13,8 +13,10 @@ function reducer(state, action) {
 }
 
 const Reducer = () => {
-    //state: 현재 가리키고 있는 상태
-    //dispatch: 액션을 발생시키는 함수
+
+    // Reducer: 현재 상태와 업데이트를 위해
+    // state: 현재 가리키고 있는 상태
+    // dispatch: 액션을 발생시키는 함수
     const [state, dispatch] = useReducer(reducer, {value: 0});
 
     return(
