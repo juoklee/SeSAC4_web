@@ -1,0 +1,35 @@
+.box {
+    background-color: beige;
+    display: flex;
+}
+
+.box2{
+    background-color: beige;
+}
+
+h5 {
+    background-color: beige;
+    margin: 0;
+    padding: 15px 0;
+}
+
+h2 {
+    float: left;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline;
+    padding-right: 13px;
+}
+
+.green {
+    color: darkcyan;
+}
+
+.red {
+    color: red;
+}
