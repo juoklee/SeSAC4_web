@@ -235,9 +235,39 @@
 - <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220926-map-ref/src/ex/Event_ex2.css">practice - Event_ex2.css</a><br/>
 
 ### 🧡 22-09-28: 객체지향 vs 절차지향
-### 💰 22-09-30: Hooks
-### ✉ 22-10-05: 라우터
-### 🔐 22-10-07: passport
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220928-extend-lifecycle/src/index.js">index.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220928-extend-lifecycle/src/App.js">상속 - App.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220928-extend-lifecycle/src/Ex62.js">practice - 학생정보 상속 - Ex62.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220928-extend-lifecycle/src/Ref.js">ref - Ref.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220928-extend-lifecycle/src/ScrollBox.js">practice - ref - scrollBox.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220928-extend-lifecycle/src/ScrollBox.css">practice - ref - scrollBox.css</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220928-extend-lifecycle/src/LifeCycle.js">lifeCycle - LifeCycle.js</a><br/>
+
+### 💰 22-09-30: Hooks, sass
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220930-hook/src/index.js">index.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220930-hook/src/0App.js">hook - useState</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220930-hook/src/1HookEffect.js">hook - useEffect</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220930-hook/src/2HookReducer.js">hook - useReducer </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220930-hook/src/3HooksMemo.js">hook - useMemo, useuseCallback, useRef</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220930-hook/src/3HooksMemo.js">hook - useMemo, useuseCallback, useRef</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220930-hook/src/5UseSass.js">sass - UseSass.js </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220930-hook/src/5UseSass.scss">sass - UseSass.scss </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220930-hook/src/6CSSModule.js">css module - CSSModule.js </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220930-hook/src/6CSSModule.module.css">css module - CSSModule.module.css </a><br/>
+
+### ✉ 22-10-05: React Router
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/221005-router/src/index.js">index.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/221005-router/src/App.js">App.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/221005-router/src/ReactRouter.js">ReactRouter.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/221005-router/src/Main.js">Main.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/221005-router/src/Product.js">Product.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/221005-router/src/Ex64.js">practice - Ex64.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/221005-router/src/Product.js">practice - Ex64.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/221005-router/src/ExMain.js">practice - ExMain.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/221005-router/src/Student.js">practice - Student.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/221005-router/src/ExCSS.css">practice - ExCSS.css</a><br/>
+
+### 🔐 22-10-07: passport(google, kakao)
 
 ### 👩‍💻 22-10-07 ~ 22-10-14: 개인 프로젝트
 
