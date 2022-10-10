@@ -89,18 +89,57 @@
 - <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220720/220720_3_class_module.js">practice-fs모듈, http와 callback</a><br/>
 
 ### 🏆 22-07-22: Express, Node Package Manager(NPM), EJS
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220722/index.js">express 사용 - index.js </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/tree/master/nodejs/220722/public">public 폴더 - 정적파일 관리 </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220722/views/test.ejs">ejs 문법</a><br/>
+
 ### 🎯 22-07-25: HTML form, Body-parser, Json
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220725/index.js">form 태그 사용 - index.js </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220725/views/index.ejs">form 태그를 사용해서 데이터 보내기 - index.ejs </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220725/views/receive.ejs">form 태그 사용해서 보낸 데이터 화면으로 띄우기 - receive.ejs </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220725/views/ex30.ejs">practice - get으로 정보받기 - ex30.ejs </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220725/views/ex31.ejs">practice - post으로 정보받기 - ex31.ejs </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220725/views/ex32.ejs">practice - 회원가입 폼 만들기 - ex32.ejs </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220725/views/success_join.ejs">practice - 회원가입 후 이동 화면 - success_join.ejs </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220725/views/ex32_login.ejs">practice - 로그인 폼 만들기 - success_join.ejs </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220725/views/success_login.ejs">practice - 로그인 후 이동 화면 - success_join.ejs </a><br/>
+
 ### 💚 22-07-27: Axios, Asynchronous HTTP
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220727/index.js">비동기 통신 Axios 사용 - index.js </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220727/views/index.ejs">비동기 통신 Axios 사용 - index.ejs </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220727/views/ex30.ejs"> practice - Axios 사용해서 회원가입 폼 만들기 </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220727/views/ex32_login.ejs"> practice - Axios 사용해서 로그인 폼 만들기 </a><br/>
+
 ### 💎 22-07-29 Day15: MiddlWare, Multer
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220729/index.js"> multer 사용해서 파일업로드, 미들웨어 사용 - index.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220729/views/index.ejs">multer 사용해서 파일업로드 - index.ejs</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220729/views/ex36.ejs">practice - 회원가입에 프로필 사진 업로드</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220729/views/ex36_success.ejs">practice - 프로필 사진 띄우기</a><br/>
+
 ### 🥽 22-08-01: DB, MySQL query
+
 ### 🎹 22-08-03: MVC, Route
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220803/index.js">MVC - index.js </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220803/routes/index.js">MVC - routes/index.js </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220803/model/User.js">MVC - model/User.js </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220803/controller/UserController.js">MVC - controller/UserController.js </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220803/views/index.ejs">MVC - views/index.ejs </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220803_ex/index.js">practice - MVC 구조로 회원가입, 파일업로드, 회원정보 수정 구현 - index.js </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220803_ex/routes/index.js">practice - MVC 구조로 회원가입, 파일업로드, 회원정보 수정 구현 - routes/index.js </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220803_ex/model/User.js">practice - MVC 구조로 회원가입, 파일업로드, 회원정보 수정 구현 - model/User.js </a><br/> 
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220803_ex/controller/UserController.js">practice - MVC 구조로 회원가입, 파일업로드, 회원정보 수정 구현 - controller/UserController.js </a><br/> 
+- <a href="https://github.com/juoklee/SeSAC4_web/tree/master/nodejs/220803_ex/views">practice - MVC 구조로 회원가입, 파일업로드, 회원정보 수정 구현 - views  </a><br/> 
+
 ### 🍤 22-08-05: MVC CRUD(1)
 ### ⛈ 22-08-08: MVC CRUD(2)
 ### 💻 22-08-10: ORM, Sequelize
 ### 👨‍👩‍👦‍👦 22-08-15 ~ 22-09-02: Team Project
-* <a href="https://github.com/SeSAC43-Project/StudyWith">Swith Project</a><br/>
 
-  [![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=jubby)](https://velog.io/@jubby/Swith-팀-프로젝트-회고록)
+  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=SeSAC43-Project&repo=StudyWith)](https://github.com/SeSAC43-Project/StudyWith)
+  
+  [![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=jubby&tag=teamProject)](https://velog.io/@jubby/Swith-팀-프로젝트-회고록)
+
+  
 ### 🌪 22-09-05: CSS Responsive Web Design
 ### 🎃 22-09-07: Socket(1)
 ### 🍕 22-09-14: Socket(2)
