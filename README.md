@@ -131,27 +131,116 @@
 - <a href="https://github.com/juoklee/SeSAC4_web/tree/master/nodejs/220803_ex/views">practice - MVC 구조로 회원가입, 파일업로드, 회원정보 수정 구현 - views  </a><br/> 
 
 ### 🍤 22-08-05: MVC CRUD(1)
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220805/index.js">방명록 구현해보기 - index.js </a><br/> 
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220805/routes/index.js">방명록 구현해보기 - routes/index.js </a><br/> 
+- <a href="https://github.com/juoklee/SeSAC4_web/tree/master/nodejs/220805/model">방명록 구현해보기 - model/Visitor.js </a><br/> 
+- <a href="https://github.com/juoklee/SeSAC4_web/tree/master/nodejs/220805/model">방명록 구현해보기 - model/Visitor.js </a><br/> 
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220805/controller/VisitorController.js">방명록 구현해보기 - controller/VisitorController.js </a><br/> 
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220805/views/index.ejs">방명록 구현해보기 - views/index.ejs </a><br/> 
+
 ### ⛈ 22-08-08: MVC CRUD(2)
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220808_ex/index.js">practice - 회원가입, 로그인, 회원정보 수정을 DB와 연동하여 구현하기 - index.js </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220808_ex/routes/index.js">practice - 회원가입, 로그인, 회원정보 수정을 DB와 연동하여 구현하기 - routes/index.js </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220808_ex/model/User.js">practice - 회원가입, 로그인, 회원정보 수정을 DB와 연동하여 구현하기 - model/User.js </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220808_ex/controller/UserController.js">practice - 회원가입, 로그인, 회원정보 수정을 DB와 연동하여 구현하기 - controller/UserController.js </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/tree/master/nodejs/220808_ex/views">practice - 회원가입, 로그인, 회원정보 수정을 DB와 연동하여 구현하기 - views </a><br/>
+
 ### 💻 22-08-10: ORM, Sequelize
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220810/index.js">Sequelize - index.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220810/config/config.json">Sequelize - config/config.json</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220810/routes/index.js">Sequelize - routes/index.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220810/model/index.js">Sequelize - model/index.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220810/model/Visitor.js">Sequelize - model/Visitor.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220810/controller/VisitorController.js">Sequelize - controller/VisitorController.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220810/views/index.ejs">Sequelize - views/index.ejs</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220810_ex/index.js">practice - 회원정보 관리 추가하기 - index.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220810_ex/config/config.json">practice - 회원정보 관리 추가하기 - config/config.json</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220810_ex/routes/index.js">practice - 회원정보 관리 추가하기 - routes/index.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220810_ex/model/index.js">practice - 회원정보 관리 추가하기 - model/index.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220810_ex/model/User.js">practice - 회원정보 관리 추가하기 - model/User.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220810_ex/controller/UserController.js">practice - 회원정보 관리 추가하기 - controller/UserController.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/tree/master/nodejs/220810_ex/views">practice - 회원정보 관리 추가하기 - views</a><br/>
+
+### 🍪 22-08-12: session, cookie
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220812/index.js">Cookie&Session - index.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/tree/master/nodejs/220812/views">Cookie&Session - views </a><br/>
+
 ### 👨‍👩‍👦‍👦 22-08-15 ~ 22-09-02: Team Project
 
   [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=SeSAC43-Project&repo=StudyWith)](https://github.com/SeSAC43-Project/StudyWith)
   
   [![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=jubby&tag=teamProject)](https://velog.io/@jubby/Swith-팀-프로젝트-회고록)
 
-  
 ### 🌪 22-09-05: CSS Responsive Web Design
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/css/normalize.css">CSS 스타일 초기화 - normalize.css </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/css/reset.css">CSS 스타일 초기화 - reset.css </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/css/220905_unit.html">반응형 웹 - HTML </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/css/220905_unit.css">반응형 웹 - CSS </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/css/problem1.html">practice - html1 </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/css/problem2.html">practice - html2 </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/css/problem.js">practice - css </a><br/>
+
 ### 🎃 22-09-07: Socket(1)
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220907/index.js">Socket.io - index.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220907/index.html">Socket.io - index.html</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220907_chat/index.html">practice - chatting 구현 - index.html</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220907_chat/index.js">practice - chatting 구현 - index.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220907_chat/chat.html">practice - chatting 구현 - chat.html</a><br/>
+
 ### 🍕 22-09-14: Socket(2)
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220914/index.js">nickname 사용하기 - index.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220914/views/main.html">nickname 사용하기 - views/main.html</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220914/views/chat.html">nickname 사용하기 - views/chat.html</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/nodejs/220914/public/css/chat.css">nickname 사용하기 - public/css/chat.css</a><br/>
+
 ### 🥨 22-09-16: Socket(3)
-### ✂ 22-09-21: React 
-### 💜 22-09-23 DAY28: state와 useState
-### 💚 22-09-26 DAY29: map(), filter
-### 🧡 22-09-28 DAY30: 객체지향 vs 절차지향
-### 💰 22-09-30 DAY31: Hooks
-### ✉ 22-10-05 DAY32: 라우터
-### 🔐 22-10-07 DAY33: passport
+개인프로젝트👩‍💻 - socket.io 이용해서 채팅 사이트 구현
 
+  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=juoklee&repo=OnlineChatting)](https://github.com/juoklee/OnlineChatting)
 
+### 📃 22-09-19: AWS, 포트폴리오 만들기
+개인프로젝트👩‍💻 - socket.io 이용해서 채팅 사이트 구현을 AWS를 이용해서 서버에 올리기
+
+  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=juoklee&repo=OnlineChatting)](https://github.com/juoklee/OnlineChatting)
+  
+### ✂ 22-09-21: React
+- <a href="https://github.com/juoklee/SeSAC4_web/tree/master/react/220921-init/src">React Project 생성 - src/index.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/tree/master/react/220921-init/src">React 클래스형&함수형 Component - src/ClassComponent.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220921-init/src/App.js">practice - props - App.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220921-init/src/App.css">practice - props - App.css</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220921-init/src/Prop1.js">practice - props - Prop1.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220921-init/src/Prop2.js">practice - props - Prop2.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220921-init/src/Prop3.js">practice - props - Prop3.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220921-init/src/Test.js">practice - props - Test.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220921-init/src/Test2.js">practice - props - Test2.js</a><br/>
+
+### 💜 22-09-23: state와 useState
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220923-state-event/src/index.js">state, useState - index.js </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220923-state-event/src/StateClass.js">state - StateClass.js </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220923-state-event/src/StateFunction.js">state - StateFunction.js </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220923-state-event/src/StateFunction.js">practice - 숫자 증감(Class) - Ex56Class1.js </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220923-state-event/src/Ex56Function2.js">practice - 숫자 증감(Function) - Ex56Function2.js </a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220923-state-event/src/EventClass.js">event - EventClass</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220923-state-event/src/EventFunction.js">event - EventFunction</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220923-state-event/src/Event.js">event - Event</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220923-state-event/src/EventC.js">event - EventC</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220923-state-event/src/ex/Handler_ex.js">practice - Handler_ex</a><br/>
+
+### 💚 22-09-26: map(), filter
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220926-map-ref/src/index.js">index.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220926-map-ref/src/map.js">map() - map.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220926-map-ref/src/sample.js">filter() - sample.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220926-map-ref/src/ex/Event_ex.js">practice - Event_ex.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220926-map-ref/src/ex/Event_ex2.js">practice - Event_ex2.js</a><br/>
+- <a href="https://github.com/juoklee/SeSAC4_web/blob/master/react/220926-map-ref/src/ex/Event_ex2.css">practice - Event_ex2.css</a><br/>
+
+### 🧡 22-09-28: 객체지향 vs 절차지향
+### 💰 22-09-30: Hooks
+### ✉ 22-10-05: 라우터
+### 🔐 22-10-07: passport
+
+### 👩‍💻 22-10-07 ~ 22-10-14: 개인 프로젝트
+
+  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=juoklee&repo=backend-clone-project)](https://github.com/juoklee/backend-clone-project)
 
 
